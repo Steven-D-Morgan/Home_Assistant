@@ -1,0 +1,16 @@
+###########################################
+###########################################
+###########################################
+############ utility_meter.yaml ###########
+###########################################
+
+#total_daily_energy:
+#  source: sensor.utility_meter_total
+#  cycle: daily
+#total_monthly_energy:
+#  source: sensor.utility_meter_total
+#  cycle: monthly
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
