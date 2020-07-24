@@ -1,0 +1,23 @@
+###########################################
+###########################################
+###########################################
+############# nodemcu_02.yaml #############
+###########################################
+
+- platform: mqtt
+  name: Front Door
+  state_topic: NodeMCU_02/security/reed1
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: door
+###########################################
+- platform: mqtt
+  name: Back Door
+  state_topic: NodeMCU_02/security/reed2
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: door
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
