@@ -1,0 +1,37 @@
+###########################################
+###########################################
+###########################################
+######### kasa_refrigerator.yaml ##########
+###########################################
+
+  - platform: template
+    sensors:
+###########################################
+      kasa_refrigerator_amps:
+        friendly_name_template: "{{ states.switch.kitchen_refrigerator.name}} Current"
+        value_template: '{{ states.switch.kitchen_refrigerator.attributes["current_a"] | float }}'
+        unit_of_measurement: 'A'
+###########################################
+      kasa_refrigerator_watts:
+        friendly_name_template: "{{ states.switch.kitchen_refrigerator.name}} Current Consumption"
+        value_template: '{{ states.switch.kitchen_refrigerator.attributes["current_power_w"] | float }}'
+        unit_of_measurement: 'W'
+###########################################
+      kasa_refrigerator_kwh:
+        friendly_name_template: "{{ states.switch.kitchen_refrigerator.name}} Total Consumption"
+        value_template: '{{ states.switch.kitchen_refrigerator.attributes["total_energy_kwh"] | float }}'
+        unit_of_measurement: 'kWh'
+###########################################
+      kasa_refrigerator_volts:
+        friendly_name_template: "{{ states.switch.kitchen_refrigerator.name}} Voltage"
+        value_template: '{{ states.switch.kitchen_refrigerator.attributes["voltage"] | float }}'
+        unit_of_measurement: 'V'
+###########################################
+      kasa_refrigerator_kwh_today:
+        friendly_name_template: "{{ states.switch.kitchen_refrigerator.name}} Today's Consumption"
+        value_template: '{{ states.switch.kitchen_refrigerator.attributes["today_energy_kwh"] | float }}'
+        unit_of_measurement: 'kWh' 
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
