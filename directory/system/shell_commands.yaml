@@ -1,0 +1,85 @@
+###########################################
+###########################################
+###########################################
+########### shell_commands.yaml ###########
+###########################################
+
+# Roku: Hostname='Living-Room' (WIRED) - 10.1.50.50
+# Roku Ultra: Hostname='Master-Bedroom' (WIRED) - 10.1.50.51
+# Roku Ultra: Hostname='Master-Bedroom' (WIFI) - 10.1.50.52
+# Roku: Hostname='Spare-Bedroom' (WIRED) - 10.1.50.53
+# Roku Premiere: Hostname='Roku' (WIFI) - Location='Nursery' - 10.1.50.54
+
+living_room_roku_on: 'curl -X POST http://10.1.50.50:8060/keypress/PowerOn'
+living_room_roku_off: 'curl -X POST http://10.1.50.50:8060/keypress/PowerOff'
+living_room_roku_volume_up: 'curl -X POST http://10.1.50.50:8060/keypress/VolumeUp'
+living_room_roku_volume_down: 'curl -X POST http://10.1.50.50:8060/keypress/VolumeDown'
+living_room_roku_home: 'curl -X POST http://10.1.50.50:8060/keypress/Home'
+living_room_roku_reverse: 'curl -X POST http://10.1.50.50:8060/keypress/Rev'
+living_room_roku_select: 'curl -X POST http://10.1.50.50:8060/keypress/Select'
+living_room_roku_left: 'curl -X POST http://10.1.50.50:8060/keypress/Left'
+living_room_roku_right: 'curl -X POST http://10.1.50.50:8060/keypress/Right'
+living_room_roku_down: 'curl -X POST http://10.1.50.50:8060/keypress/Down'
+living_room_roku_up: 'curl -X POST http://10.1.50.50:8060/keypress/Up'
+living_room_roku_back: 'curl -X POST http://10.1.50.50:8060/keypress/Back'
+living_room_roku_info: 'curl -X POST http://10.1.50.50:8060/keypress/Info'
+###########################################
+master_bedroom_roku_rj45_on: 'curl -X POST http://10.1.50.51:8060/keypress/PowerOn'
+master_bedroom_roku_rj45_off: 'curl -X POST http://10.1.50.51:8060/keypress/PowerOff'
+master_bedroom_roku_rj45_volume_up: 'curl -X POST http://10.1.50.51:8060/keypress/VolumeUp'
+master_bedroom_roku_rj45_volume_down: 'curl -X POST http://10.1.50.51:8060/keypress/VolumeDown'
+master_bedroom_roku_rj45_home: 'curl -X POST http://10.1.50.51:8060/keypress/Home'
+master_bedroom_roku_rj45_reverse: 'curl -X POST http://10.1.50.51:8060/keypress/Rev'
+master_bedroom_roku_rj45_select: 'curl -X POST http://10.1.50.51:8060/keypress/Select'
+master_bedroom_roku_rj45_left: 'curl -X POST http://10.1.50.51:8060/keypress/Left'
+master_bedroom_roku_rj45_right: 'curl -X POST http://10.1.50.51:8060/keypress/Right'
+master_bedroom_roku_rj45_down: 'curl -X POST http://10.1.50.51:8060/keypress/Down'
+master_bedroom_roku_rj45_up: 'curl -X POST http://10.1.50.51:8060/keypress/Up'
+master_bedroom_roku_rj45_back: 'curl -X POST http://10.1.50.51:8060/keypress/Back'
+master_bedroom_roku_rj45_info: 'curl -X POST http://10.1.50.51:8060/keypress/Info'
+###########################################
+master_bedroom_roku_wifi_on: 'curl -X POST http://10.1.50.52:8060/keypress/PowerOn'
+master_bedroom_roku_wifi_off: 'curl -X POST http://10.1.50.52:8060/keypress/PowerOff'
+master_bedroom_roku_wifi_volume_up: 'curl -X POST http://10.1.50.52:8060/keypress/VolumeUp'
+master_bedroom_roku_wifi_volume_down: 'curl -X POST http://10.1.50.52:8060/keypress/VolumeDown'
+master_bedroom_roku_wifi_home: 'curl -X POST http://10.1.50.52:8060/keypress/Home'
+master_bedroom_roku_wifi_reverse: 'curl -X POST http://10.1.50.52:8060/keypress/Rev'
+master_bedroom_roku_wifi_select: 'curl -X POST http://10.1.50.52:8060/keypress/Select'
+master_bedroom_roku_wifi_left: 'curl -X POST http://10.1.50.52:8060/keypress/Left'
+master_bedroom_roku_wifi_right: 'curl -X POST http://10.1.50.52:8060/keypress/Right'
+master_bedroom_roku_wifi_down: 'curl -X POST http://10.1.50.52:8060/keypress/Down'
+master_bedroom_roku_wifi_up: 'curl -X POST http://10.1.50.52:8060/keypress/Up'
+master_bedroom_roku_wifi_back: 'curl -X POST http://10.1.50.52:8060/keypress/Back'
+master_bedroom_roku_wifi_info: 'curl -X POST http://10.1.50.52:8060/keypress/Info'
+###########################################
+spare_bedroom_roku_on: 'curl -X POST http://10.1.50.53:8060/keypress/PowerOn'
+spare_bedroom_roku_off: 'curl -X POST http://10.1.50.53:8060/keypress/PowerOff'
+spare_bedroom_roku_volume_up: 'curl -X POST http://10.1.50.53:8060/keypress/VolumeUp'
+spare_bedroom_roku_volume_down: 'curl -X POST http://10.1.50.53:8060/keypress/VolumeDown'
+spare_bedroom_roku_home: 'curl -X POST http://10.1.50.53:8060/keypress/Home'
+spare_bedroom_roku_reverse: 'curl -X POST http://10.1.50.53:8060/keypress/Rev'
+spare_bedroom_roku_select: 'curl -X POST http://10.1.50.53:8060/keypress/Select'
+spare_bedroom_roku_left: 'curl -X POST http://10.1.50.53:8060/keypress/Left'
+spare_bedroom_roku_right: 'curl -X POST http://10.1.50.53:8060/keypress/Right'
+spare_bedroom_roku_down: 'curl -X POST http://10.1.50.53:8060/keypress/Down'
+spare_bedroom_roku_up: 'curl -X POST http://10.1.50.53:8060/keypress/Up'
+spare_bedroom_roku_back: 'curl -X POST http://10.1.50.53:8060/keypress/Back'
+spare_bedroom_roku_info: 'curl -X POST http://10.1.50.53:8060/keypress/Info'
+###########################################
+nursery_roku_wifi_on: 'curl -X POST http://10.1.50.54:8060/keypress/PowerOn'
+nursery_roku_wifi_off: 'curl -X POST http://10.1.50.54:8060/keypress/PowerOff'
+nursery_roku_wifi_volume_up: 'curl -X POST http://10.1.50.54:8060/keypress/VolumeUp'
+nursery_roku_wifi_volume_down: 'curl -X POST http://10.1.50.54:8060/keypress/VolumeDown'
+nursery_roku_wifi_home: 'curl -X POST http://10.1.50.54:8060/keypress/Home'
+nursery_roku_wifi_reverse: 'curl -X POST http://10.1.50.54:8060/keypress/Rev'
+nursery_roku_wifi_select: 'curl -X POST http://10.1.50.54:8060/keypress/Select'
+nursery_roku_wifi_left: 'curl -X POST http://10.1.50.54:8060/keypress/Left'
+nursery_roku_wifi_right: 'curl -X POST http://10.1.50.54:8060/keypress/Right'
+nursery_roku_wifi_down: 'curl -X POST http://10.1.50.54:8060/keypress/Down'
+nursery_roku_wifi_up: 'curl -X POST http://10.1.50.54:8060/keypress/Up'
+nursery_roku_wifi_back: 'curl -X POST http://10.1.50.54:8060/keypress/Back'
+nursery_roku_wifi_info: 'curl -X POST http://10.1.50.54:8060/keypress/Info'
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
