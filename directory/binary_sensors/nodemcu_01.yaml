@@ -1,0 +1,30 @@
+###########################################
+###########################################
+###########################################
+############# nodemcu_01.yaml #############
+###########################################
+
+- platform: mqtt
+  name: Master Bathroom Window
+  state_topic: NodeMCU_01/security/reed1
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: window
+###########################################
+- platform: mqtt
+  name: Left Guest Bedroom Window
+  state_topic: NodeMCU_01/security/reed2
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: window
+###########################################
+- platform: mqtt
+  name: Right Guest Bedroom Window
+  state_topic: NodeMCU_01/security/reed3
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: window
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
