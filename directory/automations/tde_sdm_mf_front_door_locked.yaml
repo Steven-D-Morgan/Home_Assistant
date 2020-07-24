@@ -3,6 +3,7 @@
 ###########################################
 #### tde_sdm_mf_front_door_locked.yaml ####
 ###########################################
+
 - alias: '[iOS_Sounds] Front Door: Locked'
   trigger:
     - platform: state
@@ -17,5 +18,5 @@
           sound: "US-EN-Morgan-Freeman-Front-Door-Locked.wav"
 
 ###########################################
-###----- END OF CONFIGURATION FILE -----###
+###----> END OF CONFIGURATION FILE <----###
 ###########################################
