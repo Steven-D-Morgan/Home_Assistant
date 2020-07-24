@@ -1,0 +1,17 @@
+###########################################
+###########################################
+###########################################
+############### weather.yaml ##############
+###########################################
+
+- platform: darksky
+  api_key: !secret dark_sky_api_key
+  name: Dark Sky Forecast
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  units: us
+  mode: daily
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
