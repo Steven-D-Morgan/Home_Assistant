@@ -1,0 +1,111 @@
+- name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: !secret home_radius
+  icon: mdi:castle
+###########################################
+- name: Booth Home
+  latitude: !secret booth_home_latitude
+  longitude: !secret booth_home_longitude
+  radius: !secret booth_home_radius
+  icon: mdi:donkey
+###########################################
+- name: Jeff & Mom's House
+  latitude: !secret jeff_roberts_home_latitude
+  longitude: !secret jeff_roberts_home_longitude
+  radius: !secret jeff_roberts_home_radius
+  icon: mdi:home-outline
+###########################################
+- name: Jimmy Love (Home)
+  latitude: !secret jll_home_latitude
+  longitude: !secret jll_home_longitude
+  radius: !secret jll_home_radius
+  icon: mdi:home-outline
+###########################################
+- name: Jimmy Love (Shop)
+  longitude: !secret jll_shop_longitude
+  latitude: !secret jll_shop_latitude
+  radius: !secret jll_shop_radius
+  icon: mdi:wrench
+###########################################
+- name: Lowes (Denver, NC)
+  latitude: !secret lowes_denver_latitude
+  longitude: !secret lowes_denver_longitude
+  radius: !secret lowes_denver_radius
+  icon: mdi:hammer
+###########################################
+- name: Lowes (Belmont, NC)
+  latitude: !secret lowes_belmont_latitude
+  longitude: !secret lowes_belmont_longitude
+  radius: !secret lowes_belmont_radius
+  icon: mdi:hammer
+###########################################
+- name: Walmart (Belmont, NC)
+  latitude: !secret walmart_belmont_latitude
+  longitude: !secret walmart_belmont_longitude
+  radius: !secret walmart_belmont_radius
+  icon: mdi:hammer-screwdriver
+###########################################
+- name: Bi-Lo (Stanley, NC)
+  latitude: !secret bilo_stanley_latitude
+  longitude: !secret bilo_stanley_longitude
+  radius: !secret bilo_stanley_radius
+  icon: mdi:map-marker
+###########################################
+- name: 'Tiny Tots (Stanley, NC)'
+  latitude: !secret tiny_tots_latitude
+  longitude: !secret tiny_tots_longitude
+  radius: !secret tiny_tots_radius
+  icon: mdi:baby-bottle-outline
+### (Entering & Leaving)
+- name: 'Hill Crest Gardens Cemetary'
+  latitude: !secret hill_crest_gardens_cemetary_latitude
+  longitude: !secret hill_crest_gardens_cemetary_longitude
+  radius: !secret hill_crest_gardens_cemetary_radius
+  icon: mdi:grave-stone
+###########################################
+- name: SDM Work
+  latitude: !secret sdm_work_latitude
+  longitude: !secret sdm_work_longitude
+  radius: !secret sdm_work_radius
+  icon: mdi:office-building
+###########################################
+- name: Lowes (South Tryon)
+  latitude: !secret lowes_south_tryon_latitude
+  longitude: !secret lowes_south_tryon_longitude
+  radius: !secret lowes_south_tryon_radius
+  icon: mdi:hammer
+###########################################
+- name: PetSmart (Gastonia, NC)
+  latitude: !secret petsmart_gastonia_latitude
+  longitude: !secret petsmart_gastonia_longitude
+  radius: !secret petsmart_gastonia_radius
+  icon: mdi:fishbowl
+###########################################
+- name: Alexis Fire Department
+  latitude: !secret alexis_fire_department_latitude
+  longitude: !secret alexis_fire_department_longitude
+  radius: !secret alexis_fire_department_radius
+  icon: mdi:fire
+###########################################
+- name: Sake Express (Mt. Holly, NC)
+  latitude: !secret sake_express_mount_holly_latitude
+  longitude: !secret sake_express_mount_holly_longitude
+  radius: !secret sake_express_mount_holly_radius
+  icon: mdi:food
+###########################################
+- name: Toby Medders Home
+  latitude: !secret toby_medders_latitude
+  longitude: !secret toby_medders_longitude
+  radius: !secret toby_medders_radius
+  icon: mdi:home-outline
+###########################################
+- name: CVS (Belmont, NC)
+  latitude: !secret cvs_belmont_latitude
+  longitude: !secret cvs_belmont_longitude
+  radius: !secret cvs_belmont_radius
+  icon: mdi:prescription
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
