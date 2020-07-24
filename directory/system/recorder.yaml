@@ -1,0 +1,61 @@
+###########################################
+###########################################
+###########################################
+############### recorder.yaml #############
+###########################################
+
+db_url: mysql://nuc_hassio:WhiteDell-1937@core-mariadb/homeassistant?charset=utf8
+auto_purge: true
+purge_keep_days: 60
+###########################################
+include:
+  domains:
+    - person
+    - lock
+#    - person
+    - alarm_control_panel
+    - climate
+###########################################
+###########################################
+###########################################
+  entities:
+###########################################
+########-----> iOS & Android <-----########
+    - sensor.ios_tde_steps
+    - sensor.ios_sdm_steps
+    - sensor.android_sjj_geolocation
+    - sensor.ios_tde_geolocation
+    - sensor.ios_tde_geolocation
+###########################################
+#####-----> Environment Sensor's <-----####
+    - sensor.living_room_luminance
+    - sensor.driveway_luminance
+###########################################
+######-----> Door's & Window's <-----######
+    - binary_sensor.front_door
+    - binary_sensor.back_door
+    - binary_sensor.hallway_bathroom_window
+    - binary_sensor.kitchen_window
+    - binary_sensor.left_living_room_window
+    - binary_sensor.right_living_room_window
+    - binary_sensor.left_guest_bedroom_window
+    - binary_sensor.right_living_room_window
+    - binary_sensor.master_bathroom_window
+###########################################
+##########-----> Camera's <-----###########
+#    - binary_sensor.cctv_back_porch
+#    - binary_sensor.cctv_front_porch
+#    - binary_sensor.cctv_back_yard
+#    - binary_sensor.cctv_front_yard
+###########################################
+#######-----> Motion Sensor's <-----#######
+    - binary_sensor.kitchen_motion
+    - binary_sensor.living_room_motion
+    - binary_sensor.master_bedroom_motion
+    - binary_sensor.nursery_motion
+    - binary_sensor.master_bedroom_closet_motion
+    - binary_sensor.driveway_motion
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
