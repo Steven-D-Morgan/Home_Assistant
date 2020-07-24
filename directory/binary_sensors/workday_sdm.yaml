@@ -1,0 +1,21 @@
+###########################################
+###########################################
+###########################################
+############ workday_sdm.yaml #############
+###########################################
+
+- platform: workday
+  name: 'SDM Work Schedule (Wednesdays)'
+  country: US
+  workdays: [wed]
+  excludes: [mon, tue, thu, fri, sat, sun]
+###########################################
+- platform: workday
+  name: 'SDM Work Schedule (Thursday-Saturday)'
+  country: US
+  workdays: [thu, fri, sat]
+  excludes: [mon, tue, wed, sun]
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
