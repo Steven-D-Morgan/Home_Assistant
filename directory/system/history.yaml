@@ -1,0 +1,19 @@
+###########################################
+###########################################
+###########################################
+############### history.yaml ##############
+###########################################
+
+#exclude:
+#  entities:
+#    - sensor.ups_apc_600_input_voltage
+#    - sensor.ups_cyberpower_1500_input_voltage
+#    - sensor.sjj_geolocation
+#    - binary_sensor.cctv_back_porch
+#    - binary_sensor.cctv_front_porch
+#    - binary_sensor.cctv_front_yard
+#    - binary_sensor.cctv_back_yard
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
