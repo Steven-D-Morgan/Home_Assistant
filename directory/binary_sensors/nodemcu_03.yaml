@@ -1,0 +1,44 @@
+###########################################
+###########################################
+###########################################
+############# nodemcu_03.yaml #############
+###########################################
+
+- platform: mqtt
+  name: Left Living Room Window
+  state_topic: NodeMCU_03/security/reed1
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: window
+###########################################
+- platform: mqtt
+  name: Right Living Room Window
+  state_topic: NodeMCU_03/security/reed2
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: window
+###########################################
+- platform: mqtt
+  name: Hallway Bathroom Window
+  state_topic: NodeMCU_03/security/reed4
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: window
+###########################################
+- platform: mqtt
+  name: Nursery Window
+  state_topic: NodeMCU_03/security/reed3
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: window
+###########################################
+- platform: mqtt
+  name: Kitchen Window
+  state_topic: NodeMCU_03/security/reed5
+  payload_on: "Open"
+  payload_off: "Closed"
+  device_class: window
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
