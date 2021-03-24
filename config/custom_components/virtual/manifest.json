@@ -1,0 +1,11 @@
+{
+  "domain": "virtual",
+  "name": "Virtual Components",
+  "documentation": "https://github.com/twrecked/hass-virtual/blob/master/README.md",
+  "dependencies": [],
+  "version": "0.7.1",
+  "codeowners": [
+    "@twrecked"
+  ],
+  "requirements": []
+}

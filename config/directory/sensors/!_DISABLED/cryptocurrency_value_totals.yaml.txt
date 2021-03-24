@@ -1,0 +1,119 @@
+###########################################
+###########################################
+###########################################
+#### abel_morgans_cryptocurrency.yaml #####
+###########################################
+- platform: template
+  sensors:
+    cryptocurrency_total_value:
+      value_template: "{{ states('sensor.crypto_value_bitcoin_btc') | float + states('sensor.crypto_value_ethereum_eth') | float + states('sensor.crypto_value_litecoin') | float + states('sensor.crypto_value_tezos_xtz') | float + states('sensor.crypto_value_basic_attention_token_bat') | float + states('sensor.crypto_value_stellar_lumens_xlm') | float + states('sensor.crypto_value_cosmos_atom') | float + states('sensor.crypto_value_maker_mkr') | float + states('sensor.crypto_value_atomic_wallet_coin_awc') | float + states('sensor.crypto_value_ravencoin_rvn') | float + states('sensor.crypto_value_cardano_ada') | float + states('sensor.crypto_value_yearn_finance_yfy') | float + states('sensor.crypto_value_binance_coin_bnb') | float + states('sensor.crypto_value_district0x_dnt') | float | round(2) }}"
+      friendly_name: 'Total Value'
+      unit_of_measurement: 'USD'
+###########################################
+###########################################
+###########################################
+- platform: template
+  sensors:
+    crypto_value_bitcoin_btc:
+      value_template: "{{ states('sensor.cryptoinfo_bitcoin_usd')|float * 0.015949 }}"
+      friendly_name: 'Bitcoin (BTC)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_ethereum_eth:
+      value_template: "{{ states('sensor.cryptoinfo_ethereum_usd')|float * 0.025551 }}"
+      friendly_name: 'Ethereum (ETH)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_tezos_xtz:
+      value_template: "{{ states('sensor.cryptoinfo_tezos_usd')|float * 25.2638 }}"
+      friendly_name: 'Tezos (XTZ)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_basic_attention_token_bat:
+      value_template: "{{ states('sensor.cryptoinfo_bat_usd')|float * 7.5693 }}"
+      friendly_name: 'Basic Attention Token (BAT)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_atomic_wallet_coin_awc:
+      value_template: "{{ states('sensor.cryptoinfo_atomic_wallet_coin_usd')|float * 35.0048 }}"
+      friendly_name: 'Atomic Wallet Coin (AWC)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_ravencoin_rvn:
+      value_template: "{{ states('sensor.cryptoinfo_ravencoin_usd')|float * 12.0157 }}"
+      friendly_name: 'Ravencoin (RVN)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_cardano_ada:
+      value_template: "{{ states('sensor.cryptoinfo_cardano_usd')|float * 1109.5758 }}"
+      friendly_name: 'Cardano (ADA)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_yearn_finance_yfy:
+      value_template: "{{ states('sensor.cryptoinfo_yearn_finance_usd')|float * 0.00296935 }}"
+      friendly_name: 'Yearn Finance (YFI)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_binance_coin_bnb:
+      value_template: "{{ states('sensor.cryptoinfo_binance_usd')|float * 0.238303 }}"
+      friendly_name: 'Binance (BNB)'
+      unit_of_measurement: 'USD'
+- platform: template
+  sensors:
+    crypto_value_stellar_lumens_xlm:
+      value_template: "{{ states('sensor.cryptoinfo_stellar_usd')|float * 1.000000 }}"
+      friendly_name: 'Stellar Lumens (XLM)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_cosmos_atom:
+      value_template: "{{ states('sensor.cryptoinfo_cosmos_usd')|float * 0.00 }}"
+      friendly_name: 'ATOM (COSMOS)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_maker_mkr:
+      value_template: "{{ states('sensor.cryptoinfo_maker_usd')|float * 0.00 }}"
+      friendly_name: 'MakerDAO (MKR)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_litecoin_ltc:
+      value_template: "{{ states('sensor.cryptoinfo_litecoin_usd')|float * 0.00 }}"
+      friendly_name: 'Litecoin (LTC)'
+      unit_of_measurement: 'USD'
+###########################################
+- platform: template
+  sensors:
+    crypto_value_district0x_dnt:
+      value_template: "{{ states('sensor.cryptoinfo_district0x_usd')|float * 735.31819595 }}"
+      friendly_name: 'District0x (DNT)'
+      unit_of_measurement: 'USD'
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###
+#https://api.coingecko.com/api/v3/coins/list
+# value_template: “{{ states(‘sensor.powermon_housesolar’) | float + states(‘sensor.powermon_shedsolar’) | float }}”

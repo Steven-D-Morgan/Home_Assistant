@@ -1,0 +1,14 @@
+###########################################
+###########################################
+###########################################
+##### ups_cyberpower1500_minutes.yaml #####
+###########################################
+
+- platform: template
+  sensors:
+    ups_cyberpower1500_battery_runtime_minutes:
+      value_template: '{{ ((states.sensor.ups_cyberpower1500_battery_runtime_seconds.state | float * 1 / 60)) | round(2) }}'
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

@@ -1,0 +1,49 @@
+###########################################
+###########################################
+###########################################
+############ utility_meter.yaml ###########
+###########################################
+  total_energy_usage_daily:
+    source: sensor.home_energy_meter_total_kwh
+    cycle: daily
+  total_energy_usage_monthly:
+    source: sensor.home_energy_meter_total_kwh
+    cycle: monthly
+  total_energy_usage_quarterly:
+    source: sensor.home_energy_meter_total_kwh
+    cycle: quarterly
+  total_energy_usage_annually:
+    source: sensor.home_energy_meter_total_kwh
+    cycle: yearly
+###########################################
+  total_water_usage_daily:
+    source: sensor.home_water_meter_today
+    cycle: daily
+  total_water_usage_monthly:
+    source: sensor.home_water_meter_today
+    cycle: monthly
+    offset:
+      days: 18
+      hours: 0
+      minutes: 0
+  total_water_usage_quarterly:
+    source: sensor.home_water_meter_today
+    cycle: quarterly
+  total_water_usage_annually:
+    source: sensor.home_water_meter_today
+    cycle: yearly
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###
+# https://www.home-assistant.io/integrations/utility_meter/
+# https://github.com/gurbyz/power-wheel-card
+###########################################
+#total_daily_energy:
+#  source: sensor.utility_meter_total
+#  cycle: daily
+###########################################
+# 0.1001348 per kWh charged by Duke Energy
+###########################################

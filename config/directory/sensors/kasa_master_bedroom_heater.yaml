@@ -1,0 +1,35 @@
+###########################################
+###########################################
+###########################################
+##### kasa_master_bedroom_heater.yaml #####
+###########################################
+- platform: template
+  sensors:
+###########################################
+    master_bedroom_heater_amps:
+      friendly_name_template: "{{ states.switch.master_bedroom_heater.name}} Current"
+      value_template: '{{ states.switch.master_bedroom_heater.attributes["current_a"] | float }}'
+      unit_of_measurement: 'A'
+###########################################
+    master_bedroom_heater_watts:
+      friendly_name_template: "{{ states.switch.master_bedroom_heater.name}} Current Consumption"
+      value_template: '{{ states.switch.master_bedroom_heater.attributes["current_power_w"] | float }}'
+      unit_of_measurement: 'W'
+###########################################
+    master_bedroom_heater_kwh_total:
+      friendly_name_template: "{{ states.switch.master_bedroom_heater.name}} Total Consumption"
+      value_template: '{{ states.switch.master_bedroom_heater.attributes["total_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+###########################################
+    master_bedroom_heater_volts:
+      friendly_name_template: "{{ states.switch.master_bedroom_heater.name}} Voltage"
+      value_template: '{{ states.switch.master_bedroom_heater.attributes["voltage"] | float }}'
+      unit_of_measurement: 'V'
+###########################################
+    master_bedroom_heater_kwh_today:
+      friendly_name_template: "{{ states.switch.master_bedroom_heater.name}} Today's Consumption"
+      value_template: '{{ states.switch.master_bedroom_heater.attributes["today_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

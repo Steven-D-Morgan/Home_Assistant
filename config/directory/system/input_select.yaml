@@ -1,0 +1,43 @@
+###########################################
+###########################################
+###########################################
+############ input_select.yaml ############
+###########################################
+wled_living_room_tv_mode:
+  name: Living Room TV
+  icon: mdi:led-strip-variant
+  options:
+    - "OFF"
+    - "2015"
+    - "Bouncing Balls"
+    - "BPM"
+    - "Breathe"
+    - "Chase Random"
+    - "Color Loop"
+    - "Fireworks"
+    - "Heartbeat"
+    - "Juggle"
+    - "Lightning"
+    - "Merry Christmas!"
+    - "Meteor"
+    - "Oscillate"
+    - "Plasma"
+    - "Police"
+    - "Scanner Dual"
+    - "Two Dots"
+###########################################
+wled_mode_all_exterior:
+  name: Exterior wLED Mode
+  options:
+    - "OFF"
+###########################################
+wled_mode_all_interior:
+  name: Interior wLED Mode
+  options:
+    - "OFF"
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

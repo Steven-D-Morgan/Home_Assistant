@@ -1,0 +1,8 @@
+#- platform: virtual
+#  name: Home Mode
+
+#- platform: virtual
+#  name: Away Mode
+
+#- platform: virtual
+#  name: Arm Me

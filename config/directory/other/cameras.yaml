@@ -1,0 +1,14 @@
+###########################################
+###########################################
+###########################################
+############### cameras.yaml ##############
+###########################################
+#- platform: generic
+#  stream_source: !secret amcrest_nvr_stream
+#  still_image_url: !secret amcrest_nvr_still_url
+#  name: Amcrest NVR
+#  username: !secret amcrest_nvr_username
+#  password: !secret amcrest_nvr_password
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

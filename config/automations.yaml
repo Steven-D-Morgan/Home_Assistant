@@ -1,0 +1,1432 @@
+- id: gps_sdm_beth_jeff_house_enter
+  alias: '[GPS_SDM] Beth & Jeffs House: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.steven_morgan
+    zone: zone.jeff_beths_house
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Steven has arrived at Beth & Jeffs house!
+  mode: single
+- id: gps_sdm_beth_jeff_house_leave
+  alias: '[GPS_SDM] Beth & Jeffs House: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.steven_morgan
+    zone: zone.jeff_beths_house
+    event: leave
+  condition: []
+  action:
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Steven has left Beth & Jeffs house!
+  mode: single
+- id: gps_sdm_home_enter
+  alias: '[GPS_SDM] Home: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.steven_morgan
+    zone: zone.home
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Steven has arrived at Home!
+  - service: media_player.volume_set
+    target:
+      entity_id: media_player.kitchen_echo_dot
+    data:
+      volume_level: 0.7
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: Steven has arrived at home!
+  - delay:
+      seconds: 5
+  - service: media_player.volume_set
+    target:
+      entity_id: media_player.kitchen_echo_dot
+    data:
+      volume_level: 0.5
+  mode: single
+- id: gps_sdm_home_leave
+  alias: '[GPS_SDM] Home: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.steven_morgan
+    zone: zone.home
+    event: leave
+  condition: []
+  action:
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Steven has left Home!
+  mode: single
+- id: gps_sdm_vanguard_enter
+  alias: '[GPS_SDM] Vanguard: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.steven_morgan
+    zone: zone.vanguard_1_north_falls
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Steven has arrived at work!
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Have a good day at work, Steven!
+  mode: single
+- id: gps_sdm_vanguard_leave
+  alias: '[GPS_SDM] Vanguard: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.steven_morgan
+    zone: zone.vanguard_1_north_falls
+    event: leave
+  condition: []
+  action:
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Steven has left work!
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Drive home safely, Steven!
+  mode: single
+- id: gps_sdm_booth_house_leave
+  alias: '[GPS_SDM] Booth House: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.steven_morgan
+    zone: zone.booth_home
+    event: leave
+  condition: []
+  action:
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Steven has left the Booth household!
+  mode: single
+- id: gps_sdm_booth_house_enter
+  alias: '[GPS_SDM] Booth House: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.steven_morgan
+    zone: zone.booth_home
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Steven has arrived at the Booth household!
+  mode: single
+- id: gps_tde_home_leave
+  alias: '[GPS_TDE] Home: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.home
+    event: leave
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Tiffany has left home!
+  mode: single
+- id: gps_tde_beth_jeffs_house_enter
+  alias: '[GPS_TDE] Beth & Jeffs House: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.jeff_mom_s_house
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Tiffany has arrived at Mom & Jeffs home!
+  mode: single
+- id: gps_tde_beth_jeffs_house_leave
+  alias: '[GPS_TDE] Beth & Jeffs House: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.jeff_mom_s_house
+    event: leave
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Tiffany has left Mom & Jeffs home!
+  mode: single
+- id: gps_tde_vanguard_enter
+  alias: '[GPS_TDE] Vanguard: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.vanguard_1_north_falls
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Tiffany has ariived at 1 North Falls!
+  mode: single
+- id: gps_tde_booth_house_enter
+  alias: '[GPS_TDE] Booth House: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.booth_home
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Tiffany has arrived at the Booth household!
+  mode: single
+- id: gps_tde_booth_house_leave
+  alias: '[GPS_TDE] Booth House: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.booth_home
+    event: leave
+  condition: []
+  action:
+  - service: notify.ios_tde_sdm
+    data:
+      message: Tiffany has left the Booth household!
+  mode: single
+- id: gps_tde_vanguard_leave
+  alias: '[GPS_TDE] Vanguard: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.vanguard_1_north_falls
+    event: leave
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Tiffany has left 1 North Falls!
+  mode: single
+- id: pet_turtle_tank_day_lighting_on
+  alias: '[PET] Turtle Tank: Day Lighting - ON'
+  description: Turn on the Turtle Day Lighting at sunrise
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 3f66a7472933c00fbf8898b89c8bf83c
+    entity_id: switch.turtle_tank_day_lights
+    domain: switch
+  mode: single
+- id: pet_turtle_tank_day_lighting_off
+  alias: '[PET] Turtle Tank: Day Lighting - OFF'
+  description: Turn OFF turtle tank day lighting at sunset.
+  trigger:
+  - platform: sun
+    event: sunset
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 3f66a7472933c00fbf8898b89c8bf83c
+    entity_id: switch.turtle_tank_day_lights
+    domain: switch
+  mode: single
+- id: night_lighting_living_room_tv_night_light_on
+  alias: '[N_LTG] LR TV wLED: ON'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.living_room_roku
+    to: paused
+  - platform: state
+    entity_id: media_player.living_room_roku
+    to: idle
+  - platform: time
+    at: 02:00:00
+  - platform: time
+    at: 03:00:00
+  - platform: time
+    at: 04:00:00
+  - platform: time
+    at: 05:00:00
+  condition:
+  - condition: time
+    after: 01:00:00
+    before: 06:00:00
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: media_player.living_room_roku
+      state: playing
+  action:
+  - service: light.turn_on
+    data: {}
+    target:
+      entity_id: light.wled_living_room_tv
+  - service: wled.preset
+    data:
+      preset: 3
+    entity_id: light.wled_living_room_tv
+  mode: single
+- id: night_lighting_living_room_tv_night_light_off
+  alias: '[N_LTG] LR TV wLED: OFF'
+  description: ''
+  trigger:
+  - platform: time
+    at: 06:35:00
+  condition: []
+  action:
+  - service: light.turn_off
+    entity_id: light.wled_living_room_tv
+    data: {}
+  mode: single
+- id: night_lighting_kitchen_night_light_on
+  alias: '[N_LTG] Kitchen Cabinet wLED: ON'
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition: []
+  action:
+  - service: light.turn_on
+    data: {}
+    target:
+      entity_id: light.wled_kitchen_cabinet
+  - service: wled.preset
+    data:
+      preset: 3
+    entity_id: light.wled_kitchen_cabinet
+  mode: single
+- id: night_lighting_kitchen_night_light_off
+  alias: '[N_LTG] Kitchen Cabinet wLED: OFF'
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    entity_id: light.wled_kitchen_cabinet
+  mode: single
+- id: night_lighting_lighting_back_porch_light_night_off
+  alias: '[N_LTG] Back Porch: OFF'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.back_door
+    to: 'off'
+    from: 'on'
+  condition:
+  - condition: time
+    after: '20:00:00'
+    before: 08:00:00
+  action:
+  - type: turn_off
+    device_id: f05e2d30a3e3a461e03f3fb39f0ae88e
+    entity_id: switch.back_porch_light
+    domain: switch
+  mode: single
+- id: hvac_living_room_humidifier_on
+  alias: '[HVAC] Living Room Humidifier: ON'
+  description: ''
+  trigger:
+  - type: humidity
+    platform: device
+    device_id: 63359eb5944c447fd4baaee8f94121e0
+    entity_id: sensor.living_room_humidity
+    domain: sensor
+    below: 38.9
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 24eac74f03403384a6742be3bf79ca5f
+    entity_id: switch.living_room_humidifier
+    domain: switch
+  mode: single
+- id: hvac_living_room_humidifier_off
+  alias: '[HVAC] Living Room Humidifier: OFF'
+  description: ''
+  trigger:
+  - type: humidity
+    platform: device
+    device_id: 63359eb5944c447fd4baaee8f94121e0
+    entity_id: sensor.living_room_humidity
+    domain: sensor
+    above: 41.1
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 24eac74f03403384a6742be3bf79ca5f
+    entity_id: switch.living_room_humidifier
+    domain: switch
+  mode: single
+- id: hvac_guest_bathroom_exhaust_fan_off
+  alias: '[HVAC] Guest Bath Exhaust: OFF'
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: d88264a3165bf671ed15881ca9744376
+    entity_id: switch.guest_bathroom_exhaust
+    domain: switch
+    for:
+      minutes: 30
+  condition: []
+  action:
+  - type: turn_off
+    device_id: d88264a3165bf671ed15881ca9744376
+    entity_id: switch.guest_bathroom_exhaust
+    domain: switch
+  mode: single
+- id: hvac_master_bathroom_exhaust_fan_off
+  alias: '[HVAC] Master Bath Exhaust: OFF'
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: 48c4401e9e97c09b6bfdbbe435d943e3
+    entity_id: switch.master_bathroom_exhaust
+    domain: switch
+    for:
+      minutes: 30
+  condition: []
+  action:
+  - type: turn_off
+    device_id: d88264a3165bf671ed15881ca9744376
+    entity_id: switch.guest_bathroom_exhaust
+    domain: switch
+  mode: single
+- id: alert_front_door_locked
+  alias: '[ALERT] Front Door: LOCKED'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: lock.front_door_deadbolt
+    from: unlocked
+    to: locked
+  condition: []
+  action:
+  - service: notify.ios_all
+    data:
+      message: Front Door has been locked!
+  mode: single
+- id: security_disarm_deadbolt_keypad
+  alias: '[SEC] Disarm with Deadbolt Keypad'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.be469_01_front_door_deadbolt_alarm_type
+    to: '19'
+  condition: []
+  action:
+  - service: alarm_control_panel.alarm_disarm
+    data: {}
+    entity_id: alarm_control_panel.security_system
+  mode: single
+- id: energy_buidings_off'
+  alias: '[ENERGY] Buildings: OFF'
+  description: ''
+  trigger:
+  - platform: time
+    at: 02:00:00
+  - platform: time
+    at: 03:00:00
+  - platform: time
+    at: 04:00:00
+  - platform: time
+    at: 05:00:00
+  - platform: zone
+    entity_id: person.steven_morgan
+    zone: zone.home
+    event: leave
+  condition: []
+  action:
+  - type: turn_off
+    device_id: fcaf2d480824353f3d3d55fe2175a022
+    entity_id: switch.small_building_lights
+    domain: switch
+  - type: turn_off
+    device_id: 1a81d772fde9128153191628131796ab
+    entity_id: switch.large_building_lights
+    domain: switch
+  - type: turn_off
+    device_id: ed7d476a712283c0f519afde002464b3
+    entity_id: switch.air_compressor
+    domain: switch
+  mode: single
+- id: system_reboot_access_point
+  alias: '[NET] Reboot Access Point'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: switch.netgear_wax610_poe_injector
+    to: 'off'
+    for: 00:00:20
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Netgear Access Point is starting up!
+  - type: turn_on
+    device_id: 78cd887a5c8f814104081536d3c6a3ac
+    entity_id: switch.netgear_wax610_poe_injector
+    domain: switch
+  mode: single
+- id: '1612917822889'
+  alias: '[WW] SDM: Thursday:Saturday - Routine (ON)'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.sdm_ww_thu_sat_morning
+    to: 'on'
+    from: 'off'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.sdm_ww_thu_sat_day
+    state: 'on'
+  action:
+  - type: turn_on
+    device_id: 2faed41daf5d2349a1c2dae7dd890571
+    entity_id: switch.living_room_entry_lamp
+    domain: switch
+  - type: turn_on
+    device_id: 3cfc30417bf26b7a1d108852970f8f36
+    entity_id: switch.master_bedroom_closet
+    domain: switch
+  - service: notify.mobile_app_iphone
+    data:
+      message: Good Morning, Steven!
+  - delay:
+      minutes: 15
+  - type: turn_on
+    device_id: 1504d414a79123404c6f52562e13ab6b
+    entity_id: switch.front_porch_light
+    domain: switch
+  mode: single
+- id: work_week_sdm_thursday_through_saturday_routine_off
+  alias: '[WW] SDM: Thursday:Saturday - Routine (OFF)'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.sdm_ww_thu_sat_morning
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 1504d414a79123404c6f52562e13ab6b
+    entity_id: switch.front_porch_light
+    domain: switch
+  - type: turn_off
+    device_id: 2faed41daf5d2349a1c2dae7dd890571
+    entity_id: switch.living_room_entry_lamp
+    domain: switch
+  - type: turn_off
+    device_id: 3cfc30417bf26b7a1d108852970f8f36
+    entity_id: switch.master_bedroom_closet
+    domain: switch
+  - device_id: 089479177bf8fbd94da65730aa670077
+    domain: lock
+    entity_id: lock.front_door_deadbolt
+    type: lock
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: I took care of the house for you! Door is locked and lights are off!
+  mode: single
+- id: utility_freeze_protection_close
+  alias: '[UTILITY] Water: Freeze Protection (CLOSE)'
+  description: ''
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: a0c9430593a824f52695822275a06e69
+    entity_id: sensor.front_porch_sensor_temperature
+    domain: sensor
+    below: 28.8
+    for:
+      minutes: 1
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 6d9aeaec73287418f9627ecfc0dc7a50
+    entity_id: switch.exterior_water_valve
+    domain: switch
+  - service: notify.ios_tde_sdm
+    data:
+      message: Due to outside temperatures, I closed the outside water valve!
+  mode: single
+- id: media_living_room_roku_night_play
+  alias: '[MEDIA] LR Roku: Night (PLAY)'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.living_room_roku
+    to: playing
+  condition:
+  - condition: time
+    after: '20:30:00'
+    before: 06:30:00
+  action:
+  - type: turn_off
+    device_id: 2faed41daf5d2349a1c2dae7dd890571
+    entity_id: switch.living_room_entry_lamp
+    domain: switch
+  - type: turn_off
+    device_id: 50d4b2653a999806de36c41f14730f07
+    entity_id: switch.living_room_recliner_lamp
+    domain: switch
+  - type: turn_off
+    device_id: 4c642bedcc5b1229dc2064d8bdf9bc7f
+    entity_id: light.living_room_ceiling_fan_lights
+    domain: light
+  - type: turn_off
+    device_id: ff4667e6358db4d3387a45b649821107
+    entity_id: switch.kitchen_sink_light
+    domain: switch
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.dining_room_light
+  - type: turn_off
+    device_id: f18ede9284aced7907c780b4e1728ea7
+    entity_id: switch.living_room_floor_lamp
+    domain: switch
+  - type: turn_off
+    device_id: b9ecc31770e1fdfb21881a6aee478094
+    entity_id: light.wled_living_room_tv
+    domain: light
+  mode: single
+- id: media_living_room_roku_night_pause
+  alias: '[MEDIA] LR Roku: Night (PAUSE)'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.living_room_roku
+    to: paused
+  - platform: state
+    entity_id: media_player.living_room_roku
+    to: idle
+  condition:
+  - condition: time
+    after: '21:30:00'
+    before: 06:30:00
+  action:
+  - type: turn_on
+    device_id: b9ecc31770e1fdfb21881a6aee478094
+    entity_id: light.wled_living_room_tv
+    domain: light
+  - service: wled.effect
+    data:
+      preset: 3
+    target:
+      entity_id: light.wled_living_room_tv
+  mode: single
+- id: system_reboot_amcrest_nvr
+  alias: '[NET] Reboot Amcrest NVR'
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_off
+    device_id: 2fa2a68ebeb841d25e0639a72ff297df
+    entity_id: switch.amcrest_nvr
+    domain: switch
+    for:
+      seconds: 20
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 2fa2a68ebeb841d25e0639a72ff297df
+    entity_id: switch.amcrest_nvr
+    domain: switch
+  mode: single
+- id: '1614397273287'
+  alias: '[N_LTG] Nursery'
+  description: ''
+  trigger:
+  - platform: time
+    at: '21:30:00'
+  condition: []
+  action:
+  - service: script.flux_led_nursery_night_lighting
+    data: {}
+  - service: light.turn_off
+    data: {}
+    entity_id: light.left_nursery_shelf
+  - type: turn_off
+    device_id: e37e41d4a2b97c0702bec7f8a6c83b5a
+    entity_id: switch.nursery_closet_light_light
+    domain: switch
+  mode: single
+- id: '1614455668765'
+  alias: '[N_LTG] Nursery OFF at Sunrise'
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    entity_id: light.left_nursery_shelf
+  - service: light.turn_off
+    data: {}
+    entity_id: light.right_nursery_shelf
+  mode: single
+- id: '1614455967741'
+  alias: '[N_LTG] Front Porch'
+  description: 'Turn on Front Porch Light WHEN Motion is Detected IF it is after Sunset
+    or before Sunrise. Leave it ON for 10 minutes before turning it back off. '
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: 1504d414a79123404c6f52562e13ab6b
+    entity_id: switch.front_porch_light
+    domain: switch
+  - platform: state
+    entity_id: binary_sensor.front_porch_sensor_motion
+    to: 'On'
+  condition:
+  - condition: time
+    after: '21:00:00'
+    before: 06:30:00
+  action:
+  - type: turn_on
+    device_id: 1504d414a79123404c6f52562e13ab6b
+    entity_id: switch.front_porch_light
+    domain: switch
+  - wait_template: ''
+    continue_on_timeout: true
+    timeout: 00:10:00
+  - type: turn_off
+    device_id: 1504d414a79123404c6f52562e13ab6b
+    entity_id: switch.front_porch_light
+    domain: switch
+  mode: restart
+- id: '1615076597634'
+  alias: '[UTILITY] Water: Freeze Protection (RE-OPEN)'
+  description: ''
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: a0c9430593a824f52695822275a06e69
+    entity_id: sensor.front_porch_sensor_temperature
+    domain: sensor
+    above: 33.2
+  condition:
+  - condition: state
+    entity_id: switch.exterior_water_valve
+    state: 'off'
+  action:
+  - type: turn_on
+    device_id: 6d9aeaec73287418f9627ecfc0dc7a50
+    entity_id: switch.exterior_water_valve
+    domain: switch
+  mode: single
+- id: '1615173751263'
+  alias: '[UTILITY] Pipe Burst Detected: CLOSE MAIN'
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.home_water_meter_usage_now
+    for: 00:01:00
+    above: '15.1'
+  condition: []
+  action:
+  - service: notify.ios_all
+    data:
+      message: I have detected a Water Pipe BURST! Shutting off Outside first. Then
+        Main IF burst still remains
+  - type: turn_off
+    device_id: 6d9aeaec73287418f9627ecfc0dc7a50
+    entity_id: switch.exterior_water_valve
+    domain: switch
+  - wait_template: '{{ is_state(''sensor.home_water_usage_now'', ''0'') }}'
+    continue_on_timeout: false
+    timeout: 00:03:00
+  - type: turn_off
+    device_id: 6d9aeaec73287418f9627ecfc0dc7a50
+    entity_id: switch.domestic_water_valve
+    domain: switch
+  mode: single
+- id: '1615184373126'
+  alias: '[UTILITY] Every 2 Hours, Make Sure Outside Water ON'
+  description: ''
+  trigger:
+  - platform: time_pattern
+    hours: '2'
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 6d9aeaec73287418f9627ecfc0dc7a50
+    entity_id: switch.exterior_water_valve
+    domain: switch
+  mode: single
+- id: gps_tde_home_enter
+  alias: '[GPS_TDE] Home: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.home
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Tiffany has arrived at home!
+  - service: media_player.volume_set
+    target:
+      entity_id: media_player.kitchen_echo_dot
+    data:
+      volume_level: 0.7
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: Tiffany has arrived at home!
+  - delay:
+      seconds: 5
+  - service: media_player.volume_set
+    target:
+      entity_id: media_player.kitchen_echo_dot
+    data:
+      volume_level: 0.5
+  mode: single
+- id: battery_sdm_iphone
+  alias: '[BATTERY] SDM iPhone'
+  description: ''
+  trigger:
+  - type: battery_level
+    platform: device
+    device_id: 92912f739b502b4b1ff3af419cb00ace
+    entity_id: sensor.ios_sdm_battery
+    domain: sensor
+    below: 15
+  condition:
+  - condition: state
+    entity_id: sensor.sdm_iphone_xr_battery_state
+    state: Not Charging
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Plug your phone up! It needs to be charged...
+  mode: single
+- id: battery_tde_iphone
+  alias: '[BATTERY] TDE iPhone'
+  description: ''
+  trigger:
+  - type: battery_level
+    platform: device
+    device_id: daee8f05415d4aaeab19b8cf880c0b73
+    entity_id: sensor.ios_tde_battery_level
+    domain: sensor
+    below: 15
+  condition:
+  - condition: state
+    state: Not Charging
+    entity_id: sensor.ios_tde_battery_state
+  action:
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Charge your phone! Charge your phone! Charge your phone!
+  mode: single
+- id: emm_front_porch_motion
+  alias: '[EMM] Front Porch Motion'
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: a0c9430593a824f52695822275a06e69
+    entity_id: binary_sensor.front_porch_sensor_motion
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
+  condition:
+  - condition: zone
+    entity_id: person.elizabeth_morgan
+    zone: zone.home
+  action:
+  - service: notify.mobile_app_elizabeth_android
+    data:
+      message: Motion has been detected on the Front Porch!
+  mode: single
+- id: emm_front_door_unlocked
+  alias: '[EMM] Front Door: UNLOCKED'
+  description: ''
+  trigger:
+  - platform: device
+    device_id: 089479177bf8fbd94da65730aa670077
+    domain: lock
+    entity_id: lock.front_door_deadbolt
+    type: unlocked
+  condition:
+  - condition: zone
+    entity_id: person.elizabeth_morgan
+    zone: zone.home
+  action:
+  - service: notify.mobile_app_elizabeth_android
+    data:
+      message: Front door has been UNLOCKED
+  mode: single
+- id: security_lock_door_at_night
+  alias: '[SEC] Lock Door At Night'
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:00:00
+  - platform: time
+    at: 01:00:00
+  - platform: time
+    at: 01:30:00
+  - platform: time
+    at: 02:00:00
+  - platform: time
+    at: 02:30:00
+  - platform: time
+    at: 03:00:00
+  - platform: time
+    at: 03:30:00
+  - platform: time
+    at: 04:00:00
+  - platform: time
+    at: 04:30:00
+  - platform: time
+    at: 05:00:00
+  - platform: time
+    at: 05:30:00
+  condition:
+  - condition: device
+    device_id: 089479177bf8fbd94da65730aa670077
+    domain: lock
+    entity_id: lock.front_door_deadbolt
+    type: is_unlocked
+  action:
+  - device_id: 089479177bf8fbd94da65730aa670077
+    domain: lock
+    entity_id: lock.front_door_deadbolt
+    type: lock
+  mode: single
+- id: gps_tde_work_enter
+  alias: '[GPS_TDE] Work: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.tde_work_mooresville
+    event: enter
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.tde_work_gastonia
+    event: enter
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Tiffany has arrived at work!
+  mode: single
+- id: gps_tde_work_leave
+  alias: '[GPS_TDE] Work: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.tde_work_mooresville
+    event: leave
+  - platform: zone
+    entity_id: person.tiffany_elkovich
+    zone: zone.tde_work_gastonia
+    event: leave
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Tiffany has left work!
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: Have a safe drive home!
+  mode: single
+- id: '1615399741831'
+  alias: '[GPS_EMM] Home: ENTER'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.elizabeth_morgan
+    zone: zone.home
+    event: enter
+  condition: []
+  action:
+  - service: notify.ios_tde_sdm
+    data:
+      message: Elizabeth has arrived at our home!
+  - service: media_player.volume_set
+    target:
+      entity_id: media_player.kitchen_echo_dot
+    data:
+      volume_level: 0.7
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: Elizabeth has arrived at our home!
+  - delay:
+      seconds: 5
+  - service: media_player.volume_set
+    target:
+      entity_id: media_player.kitchen_echo_dot
+    data:
+      volume_level: 0.5
+  mode: single
+- id: '1615399875918'
+  alias: '[GPS_EMM] Home: LEAVE'
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.elizabeth_morgan
+    zone: zone.home
+    event: enter
+  condition: []
+  action:
+  - service: notify.ios_tde_sdm
+    data:
+      message: Elizabeth has arrived at our home!
+  - service: notify.mobile_app_elizabeth_android
+    data:
+      message: Thank you Elizabeth, have a safe drive home! We love you!
+  mode: single
+- id: system_start_up_tasks
+  alias: '[SYSTEM] Start Up Tasks'
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - service: script.v_gps_set_locations_on_startup
+    data: {}
+  - service: zwave.start_network
+    data: {}
+  - service: script.v_gps_set_locations_on_startup
+    data: {}
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: Home Assistant has successfully started up!
+  mode: single
+- id: alert_washing_machine_load_finished
+  alias: '[ALERT] Washing Machine: Finished'
+  description: 'Notify Tiffany, Steven and Kitchen Alexa that the Washing Machine
+    has finished. '
+  trigger:
+  - from: 'on'
+    platform: state
+    to: 'off'
+    entity_id: binary_sensor.washing_machine_status
+  condition: []
+  action:
+  - service: notify.mobile_app_sdm_iphone
+    data:
+      message: I told Tiffany to go empty the Washing Machine.
+  - data:
+      message: The washing machine has finished. Go empty it woman!
+    service: notify.mobile_app_tde_iphone
+  - service: media_player.volume_set
+    target:
+      entity_id: media_player.kitchen_echo_dot
+    data:
+      volume_level: 0.7
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: Woman, go empty the washer!
+  - delay:
+      seconds: 5
+  - service: media_player.volume_set
+    target:
+      entity_id: media_player.kitchen_echo_dot
+    data:
+      volume_level: 0.5
+  mode: single
+- id: hvac_nursery_heater_on
+  alias: '[HVAC] Nursery Heater: ON'
+  description: Turn ON Heater & Ceiling Fan if the temperature goes below 73.1F.
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: bee7bb1c1f855a2debdc0e5041b244d8
+    entity_id: sensor.nursery_temperature
+    domain: sensor
+    below: 73.1
+  condition: []
+  action:
+  - type: turn_on
+    device_id: a1ef89a901d6f582f6eea94f07491878
+    entity_id: switch.nursery_heater
+    domain: switch
+  - type: turn_on
+    device_id: 8980b2e908054f19978eb602c5a77c74
+    entity_id: switch.nursery_ceiling_fan
+    domain: switch
+  mode: single
+- id: hvac_nursery_heater_off
+  alias: '[HVAC] Nursery Heater: OFF'
+  description: ''
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: bee7bb1c1f855a2debdc0e5041b244d8
+    entity_id: sensor.nursery_temperature
+    domain: sensor
+    above: 74.2
+  - type: temperature
+    platform: device
+    device_id: bee7bb1c1f855a2debdc0e5041b244d8
+    entity_id: sensor.nursery_temperature
+    domain: sensor
+    above: 75.2
+  - type: temperature
+    platform: device
+    device_id: bee7bb1c1f855a2debdc0e5041b244d8
+    entity_id: sensor.nursery_temperature
+    domain: sensor
+    above: 76.2
+  - type: temperature
+    platform: device
+    device_id: bee7bb1c1f855a2debdc0e5041b244d8
+    entity_id: sensor.nursery_temperature
+    domain: sensor
+    above: 77.2
+  condition: []
+  action:
+  - type: turn_off
+    device_id: a1ef89a901d6f582f6eea94f07491878
+    entity_id: switch.nursery_heater
+    domain: switch
+  mode: single
+- id: hvac_master_bedroom_heater_on
+  alias: '[HVAC] Master Bedroom Heater: ON'
+  description: ''
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: eaaef4e3df5121e0d2a4ede3df64ecb3
+    entity_id: sensor.master_bedroom_temperature
+    domain: sensor
+    below: 71.8
+  condition:
+  - condition: time
+    after: '19:00:00'
+    before: 08:00:00
+  action:
+  - type: turn_on
+    device_id: a1afda90bb4e71b1a55ea00a8f885318
+    entity_id: switch.master_bedroom_heater
+    domain: switch
+  mode: single
+- id: hvac_master_bedroom_heater_off
+  alias: '[HVAC] Master Bedroom Heater: OFF'
+  description: ''
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: eaaef4e3df5121e0d2a4ede3df64ecb3
+    entity_id: sensor.master_bedroom_temperature
+    domain: sensor
+    above: 72.9
+  condition: []
+  action:
+  - type: turn_off
+    device_id: a1afda90bb4e71b1a55ea00a8f885318
+    entity_id: switch.master_bedroom_heater
+    domain: switch
+  mode: single
+- id: energy_exterior_lights_off_sunrise
+  alias: '[LTG] Sunrise: OFF'
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition: []
+  action:
+  - type: turn_off
+    device_id: f05e2d30a3e3a461e03f3fb39f0ae88e
+    entity_id: switch.back_porch_light
+    domain: switch
+  - type: turn_off
+    device_id: 2f982208bbecc84edea26c5d6b501658
+    entity_id: switch.dog_house_spot_light
+    domain: switch
+  - type: turn_off
+    device_id: 1504d414a79123404c6f52562e13ab6b
+    entity_id: switch.front_porch_light
+    domain: switch
+  - type: turn_off
+    device_id: b9ecc31770e1fdfb21881a6aee478094
+    entity_id: light.wled_living_room_tv
+    domain: light
+  - type: turn_off
+    device_id: 09926d361e18230606048af7ef068c7a
+    entity_id: light.wled_front_roof_01
+    domain: light
+  - type: turn_off
+    device_id: 231688aece30f3d5ff59d4647e7c538c
+    entity_id: light.wled_front_roof_02
+    domain: light
+  - type: turn_off
+    device_id: 352424732ec37bcba1bb1a7fc89352d1
+    entity_id: light.wled_front_bricks_03
+    domain: light
+  mode: single
+- id: energy_sdm_tde_not_home_turn_off_some_stuff
+  alias: '[ENERGY] SDM & TDE: NOT Home'
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.steven_morgan_home_status
+    to: Away
+  - platform: state
+    entity_id: sensor.tiffany_elkovich_home_status
+    to: Away
+  condition:
+  - condition: state
+    entity_id: sensor.steven_morgan_home_status
+    state: Away
+  - condition: state
+    entity_id: sensor.tiffany_elkovich_home_status
+    state: Away
+  - condition: not
+    conditions:
+    - condition: zone
+      entity_id: person.elizabeth_morgan
+      zone: zone.home
+  action:
+  - type: turn_off
+    device_id: 3cfc30417bf26b7a1d108852970f8f36
+    entity_id: switch.master_bedroom_closet
+    domain: switch
+  - type: turn_off
+    device_id: f05e2d30a3e3a461e03f3fb39f0ae88e
+    entity_id: switch.back_porch_light
+    domain: switch
+  - type: turn_off
+    device_id: a1afda90bb4e71b1a55ea00a8f885318
+    entity_id: switch.master_bedroom_heater
+    domain: switch
+  - type: turn_off
+    device_id: af561f9295178a6fdc719bc3e5d2ea11
+    entity_id: switch.master_bathroom_vanity
+    domain: switch
+  - type: turn_off
+    device_id: f996275d53db1d0758c5492b385b6e92
+    entity_id: switch.master_bathroom_light
+    domain: switch
+  - type: turn_off
+    device_id: 48c4401e9e97c09b6bfdbbe435d943e3
+    entity_id: switch.master_bathroom_exhaust
+    domain: switch
+  - type: turn_off
+    device_id: d88264a3165bf671ed15881ca9744376
+    entity_id: switch.guest_bathroom_exhaust
+    domain: switch
+  - type: turn_off
+    device_id: 04f28c1539006dfd5cd785a21782531c
+    entity_id: switch.sdm_night_stand_lamp
+    domain: switch
+  - type: turn_off
+    device_id: 0d4f4919d97e52133d80c81574b75196
+    entity_id: light.desk_lamp
+    domain: light
+  - type: turn_off
+    device_id: f18ede9284aced7907c780b4e1728ea7
+    entity_id: switch.living_room_floor_lamp
+    domain: switch
+  mode: single
+- id: pet_dog_house_spot_light_on
+  alias: '[PET] Dog House Spot Light: ON'
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 00:30:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 2f982208bbecc84edea26c5d6b501658
+    entity_id: switch.dog_house_spot_light
+    domain: switch
+  mode: single
+- id: pet_dog_house_heater_on
+  alias: '[PET] Dog House Heat: ON'
+  description: Turn ON Heater & Supply Fans if the temperature goes below 52.0F for
+    5 seconds.
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: ecc41f7a965198f9fb7ccd6bb465be6e
+    entity_id: sensor.dog_house_temperature
+    domain: sensor
+    below: 44.1
+  condition: []
+  action:
+  - type: turn_on
+    device_id: fe288b3932e2015f5bcf3c59d25cf4a7
+    entity_id: switch.dog_house_heating_system
+    domain: switch
+  mode: single
+- id: pet_dog_house_heater_off
+  alias: '[PET] Dog House Heat: OFF'
+  description: ''
+  trigger:
+  - type: temperature
+    platform: device
+    device_id: ecc41f7a965198f9fb7ccd6bb465be6e
+    entity_id: sensor.dog_house_temperature
+    domain: sensor
+    above: 46.1
+    for:
+      hours: 0
+      minutes: 2
+      seconds: 0
+      milliseconds: 0
+  condition: []
+  action:
+  - type: turn_off
+    device_id: fe288b3932e2015f5bcf3c59d25cf4a7
+    entity_id: switch.dog_house_heating_system
+    domain: switch
+  mode: single
+- id: alert_nursery_crib_motion
+  alias: '[ALERT] Crib Motion Detected!'
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: d6c17d91dd125a673c6a7ce8943ad3af
+    entity_id: binary_sensor.crib_motion
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 7
+      milliseconds: 0
+  condition:
+  - condition: time
+    after: '22:00:00'
+    before: 09:30:00
+  action:
+  - service: notify.ios_tde_sdm
+    data:
+      message: Abel is moving around in his crib!
+  - service: media_player.volume_set
+    data:
+      volume_level: 0.6
+    target:
+      entity_id: media_player.living_room_echo
+  - service: media_player.volume_set
+    data:
+      volume_level: 0.4
+    target:
+      entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.master_bedroom_echo_show
+      data:
+        type: announce
+      message: Abel is moving around in his crib
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: Abel is moving around in his crib
+  - service: media_player.volume_set
+    data:
+      volume_level: 0.5
+    target:
+      entity_id: media_player.master_bedroom_echo_show
+  - delay:
+      minutes: 10
+  mode: single
+- id: alert_front_porch_motion
+  alias: '[SEC] Motion: Front Porch'
+  description: 'Once motion is DETECTED; take a picture of the Front Porch, save a
+    .jpg copy in the "tmp" folder, a second copy in the "Front_Porch" folder, send
+    an email via SMTP with the image, wait a few seconds then clear the tmp folder. '
+  trigger:
+  - type: motion
+    platform: device
+    device_id: a0c9430593a824f52695822275a06e69
+    entity_id: binary_sensor.front_porch_sensor_motion
+    domain: binary_sensor
+    for:
+      seconds: 2
+  condition: []
+  action:
+  - service: notify.ios_tde_sdm
+    data:
+      message: Motion has been detected on the Front Porch!
+  - service: script.camera_snapshot_front_porch
+    data: {}
+  - delay:
+      milliseconds: 500
+  - service: notify.usa_household_inbox
+    data:
+      data:
+        images: /config/www/surveillance/tmp/front_porch.jpg
+      message: Motion - Front Porch - {{now().strftime('%m-%d-%Y')}}
+      title: Motion - Front Porch - {{now().strftime('%H:%M %m-%d-%Y')}}
+  - delay:
+      seconds: 8
+  - service: shell_command.snapshots_clear_temp_folder
+    data: {}
+  mode: single
+- id: '1615671104863'
+  alias: '[SYSTEM] 1st of Every Month: Clear Camera Sub Directory''s'
+  description: ''
+  trigger:
+  - platform: time
+    at: '19:00:00'
+  condition:
+  - condition: template
+    value_template: '{{ now().day == 1 }}'
+  action:
+  - service: script.camera_clear_all_surveillance_subdirectories
+  mode: single

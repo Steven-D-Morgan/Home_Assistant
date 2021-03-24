@@ -1,0 +1,65 @@
+###########################################
+###########################################
+###########################################
+############ configuration.yaml ###########
+###########################################
+homeassistant:
+  name: Morgan Household
+  unit_system: imperial
+  customize: !include customize.yaml
+  customize_glob: !include customize_glob.yaml
+  auth_providers:
+    - type: homeassistant
+  elevation: 246
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  time_zone: America/New_York
+alarm_control_panel: !include directory/other/alarm_control_panel.yaml
+automation: !include automations.yaml
+binary_sensor: !include_dir_merge_list directory/binary_sensors/
+climate: !include directory/other/climate.yaml
+cloud: !include directory/system/nabucasa.yaml
+config:
+device_tracker: !include directory/other/device_trackers.yaml
+discovery:
+ffmpeg:
+frontend:
+  themes: !include_dir_merge_named directory/themes/
+group: !include directory/other/groups.yaml
+history: !include directory/system/history.yaml
+influxdb: !include directory/system/influxdb.yaml
+input_datetime:
+input_select: !include directory/system/input_select.yaml
+life360: !include directory/other/life360.yaml
+light: !include_dir_merge_list directory/lights/
+logbook:
+logger: !include directory/system/logger.yaml
+#map:
+mobile_app:
+my:
+notify: !include directory/system/notify.yaml
+panel_iframe: !include directory/system/panel_iframes.yaml
+person:
+recorder: !include directory/system/recorder.yaml 
+scene: !include scenes.yaml
+script: !include scripts.yaml
+sensor: !include_dir_merge_list directory/sensors/
+shell_command: !include directory/system/shell_commands.yaml
+ssdp:
+stream:
+sun:
+switch: !include_dir_merge_list directory/switches/
+system_health:
+timer: !include directory/other/timers.yaml
+tts:
+  - platform: google_translate
+updater:
+utility_meter: !include directory/other/utility_meters.yaml
+virtual:
+weather: !include directory/other/weather.yaml
+zeroconf:
+zone: !include directory/other/zones.yaml
+zwave: !include directory/system/zwave.yaml
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

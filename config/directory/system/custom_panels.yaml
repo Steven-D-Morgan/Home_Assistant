@@ -1,0 +1,25 @@
+###########################################
+###########################################
+###########################################
+############ custom_panel.yaml ############
+###########################################
+
+#- name: zwave-graph-panel
+#  url_path: zwave-graph
+#  sidebar_title: Z-Wave Graph
+#  sidebar_icon: mdi:z-wave
+#  module_url: /local/custom-cards/zwavegraph3.js
+#  config:
+#    # ranker - pick one: network-simplex, tight-tree, longest-path
+#    ranker: network-simplex
+#    # edge_visibility - pick one: relevant, all
+#    edge_visibility: relevant
+#    # grouping - pick one: z-wave, ungrouped
+#    grouping: z-wave
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

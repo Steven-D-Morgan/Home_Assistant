@@ -1,0 +1,24 @@
+###########################################
+###########################################
+###########################################
+##### kasa_washing_machine_status.yaml ####
+###########################################
+
+- platform: template
+  sensors:
+    washing_machine_status:
+      friendly_name: "Washing Machine"
+      icon_template: >-
+        {% if is_state('binary_sensor.washing_machine_status', 'on') %}
+          mdi:washing-machine
+        {% else %}
+          mdi:washing-machine-off
+        {% endif %}
+      delay_off:
+        seconds: 20
+      value_template: >- 
+        {{ states('sensor.washing_machine_watts')|float > 1 }}
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

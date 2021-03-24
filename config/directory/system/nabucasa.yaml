@@ -1,0 +1,304 @@
+###########################################
+###########################################
+###########################################
+############## nabucasa.yaml ##############
+###########################################
+alexa:
+  filter:
+    include_entities:
+###########################################
+###------------ Living Room ------------###
+      - switch.living_room_siren
+      - switch.living_room_entry_lamp
+      - switch.living_room_recliner_lamp
+      - switch.living_room_floor_lamp
+      - switch.living_room_ceiling_fan
+      - binary_sensor.left_living_room_window
+      - binary_sensor.right_living_room_window
+      - light.living_room_ceiling_fan_lights
+      - light.wled_living_room_tv
+###########################################
+###-------------- Kitchen --------------###
+      - switch.kitchen_light
+      - switch.kitchen_sink_light
+      - switch.dining_room_light
+      - binary_sensor.kitchen_window
+      - light.wled_kitchen_cabinet
+###########################################
+###------ Hallway & Guest Bathroom -----###
+      - switch.hallway_siren
+      - switch.hallway_light
+      - switch.guest_bathroom_light
+      - switch.guest_bathroom_vanity
+      - switch.guest_bathroom_exhaust
+      - binary_sensor.guest_bathroom_window
+###########################################
+###----------- Master Bedroom ----------###
+      - switch.master_bedroom_siren
+      - switch.master_bedroom_recessed_lights
+      - switch.master_bedroom_ceiling_fan_lights
+      - switch.master_bedroom_ceiling_fan
+      - switch.master_bedroom_heater
+      - switch.sdm_night_stand_lamp
+      - light.wled_master_bedroom_tv
+      - switch.master_bedroom_closet
+###########################################
+###---------- Master Bathroom ----------###
+      - switch.master_bathroom_vanity_lights
+      - switch.master_bathroom_light
+      - switch.master_bathroom_exhaust
+      - binary_sensor.master_bathroom_window
+###########################################
+###----------- Guest Bedroom -----------###
+      - switch.guest_bedroom_closet_light
+      - switch.guest_bedroom_light
+      - binary_sensor.left_guest_bedroom_window
+      - binary_sensor.right_guest_bedroom_window
+###########################################
+###---------- Nursery Bedroom ----------###
+      - switch.nursery_closet_light
+      - switch.nursery_ceiling_fan
+      - switch.nursery_ceiling_light
+      - binary_sensor.nursery_motion
+      - switch.nursery_heater
+      - binary_sensor.crib_motion
+      - binary_sensor.nursery_motion
+      - light.right_nursery_shelf
+      - light.left_nursery_shelf
+###########################################
+###--------- Exterior Controls ---------###
+      - lock.front_door_deadbolt
+      - binary_sensor.front_door
+      - binary_sensor.back_door
+      - switch.front_porch_light
+      - switch.back_porch_light
+      - switch.large_building_lights
+      - switch.dog_house_spot_light
+      - switch.small_building_lights
+      - switch.outside_water_valve
+#      - switch.domestic_water_valve
+      - sensor.dog_house_temperature
+      - light.wled_front_roof_01
+      - light.wled_front_roof_02
+###########################################
+###-------------- Scenes ---------------###
+
+###########################################
+###########################################
+###########################################
+###########################################
+###########################################
+  entity_config:
+###########################################
+###------------ Living Room ------------###
+    switch.living_room_floor_lamp:
+      name: Floor Lamp
+      description: Kasa Plug
+      display_categories: LIGHT
+    switch.living_room_siren:
+      name: Living Room Siren
+      description: Z-Wave Siren
+      display_categories: SWITCH
+    switch.living_room_entry_lamp:
+      name: Entry Lamp
+      description: Lamp beside front door in the livingroom.
+      display_categories: LIGHT
+    switch.living_room_recliner_lamp:
+      name: Recliner Lamp
+      description: Lamp beside recliner in the livingroom.
+      display_categories: LIGHT
+    switch.living_room_ceiling_fan:
+      name: Fan
+      description: ZOOZ Z-Wave Living Room Ceiling Fan
+      display_categories: SWITCH
+    light.living_room_ceiling_fan_lights:
+      name: Fan Lights
+      description: ZOOZ Z-Wave Switch that controls light bulbs on the ceiling fan.
+      display_categories: LIGHT
+    light.wled_living_room_tv:
+      name: Living Room TV LED
+      description: wLED WS2812b LED Strip Lighting on the back of the Living Room TV.
+      display_categories: LIGHT
+###########################################
+###-------------- Kitchen --------------###
+    switch.kitchen_light:
+      name: Kitchen Light
+      description: Kitchen Light
+      display_categories: LIGHT
+    switch.kitchen_sink_light:
+      name: Kitchen Sink Light
+      description: Z-Wave Kitchen Sink Light Switch
+      display_categories: LIGHT
+    switch.dining_room_light:
+      name: Dining Room Light
+      description: Light in Kitchen
+      display_categories: LIGHT
+    light.wled_kitchen_cabinet:
+      name: Kitchen Cabinet LEDs
+      description: wLED WS2812b LED Strip Lighting under the Kitchen Cabinets. 
+###########################################
+###------ Hallway & Guest Bathroom -----###
+    switch.hallway_siren:
+      name: Hallway Siren
+      description: MQTT Wemos Siren
+      display_categories: SWITCH
+    switch.hallway_light:
+      name: Hallway Light
+      description: Hallway Light
+      display_categories: LIGHT
+    switch.guest_bathroom_light:
+      name: Guest Bath Light
+      description: Z-Wave Hallway Bathoom Light Switch
+      display_categories: LIGHT
+    switch.guest_bathroom_vanity:
+      name: Guest Bath Vanity
+      description: Z-Wave Hallway Bathoom Vanity Light Switch
+      display_categories: LIGHT
+    switch.guest_bathroom_exhaust:
+      name: Guest Bath Exhaust
+      description: Z-Wave Hallway Bathoom Exhaust Fan Switch
+      display_categories: SWITCH
+###########################################
+###----------- Master Bedroom ----------###
+    switch.master_bedroom_siren:
+      name: Master Bedroom Siren
+      description: MQTT Wemos Siren
+      display_categories: SWITCH
+    switch.master_bedroom_recessed_lights:
+      name: Master Can Lights
+      description: MQTT Master Bedroom Can Lights
+      display_categories: LIGHT
+    switch.master_bedroom_ceiling_fan_lights:
+      name: Master Fan Lights
+      description: MQTT Master Bedroom Ceiling Fan Lights
+      display_categories: LIGHT
+    switch.master_bedroom_ceiling_fan:
+      name: Master Fan
+      description: MQTT Master Bedroom Ceiling Fan
+      display_categories: SWITCH
+    switch.master_bedroom_heater:
+      name: Master Heater
+      description: Kasa HS110 Master Bedroom Space Heater
+      display_categories: SWITCH
+    switch.sdm_night_stand_lamp:
+      name: Stevens Lamp
+      description: Steven's Night Stand Lamp
+      display_categories: LIGHT
+    light.wled_master_bedroom_tv:
+      name: Master Bedroom TV LED
+      description: wLED WS2812b LED Strip Lighting on the back of the Master Bedroom TV.
+      display_categories: LIGHT
+    switch.master_bedroom_closet:
+      name: Master Closet
+      description: HS200_05
+      display_categories: LIGHT
+###########################################
+###---------- Master Bathroom ----------###
+    switch.master_bathroom_vanity_lights:
+      name: Master Bath Vanity
+      description: Z-Wave Master Bathroom Vanity Light Switch
+      display_categories: LIGHT
+    switch.master_bathroom_light:
+      name: Master Bath Light
+      description: Z-Wave Master Bathroom Light Switch
+      display_categories: LIGHT
+    switch.master_bathroom_exhaust:
+      name: Master Bath Exhaust
+      description: Z-Wave Master Bathroom Exhaust Fan Switch.
+      display_categories: SWITCH
+###########################################
+###----------- Guest Bedroom -----------###
+    switch.guest_bedroom_closet_light:
+      name: Guest Closet
+      description: Z-Wave Guest Bedroom Closet Light Switch.
+      display_categories: SWITCH
+    switch.guest_bedroom_light:
+      name: Guest Ceiling Light
+      description: TP-Link Kasa Guest Bedroom Light Switch.
+      display_categories: SWITCH
+###########################################
+###---------- Nursery Bedroom ----------###
+    switch.nursery_closet_light:
+      name: Nursery Closet
+      description: Z-Wave Nursery Closet Light.
+      display_categories: SWITCH
+    switch.nursery_ceiling_fan:
+      name: Nursery Fan
+      description: Z-Wave Nursery Ceiling Fan.
+      display_categories: SWITCH
+    switch.nursery_ceiling_light:
+      name: Nursery Light
+      description: Z-Wave Nursery Ceiling Fan Lights.
+      display_categories: SWITCH
+    switch.nursery_heater:
+      name: Nursery Heater
+      description: Space Heater in the Nursery
+      display_categories: SWITCH
+    binary_sensor.crib_motion:
+      name: Crib Sensor
+      description: Z-Wave Motion Sensor attached within Abel's actual crib. 
+      display_categories: MOTION_SENSOR
+    binary_sensor.nursery_motion:
+      name: Nursery Motion Sensor
+      description: Z-Wave Motion Sensor above the door in the room. 
+      display_categories: MOTION_SENSOR
+    light.left_nursery_shelf:
+      name: Left Nursery Shelf
+      description: Magic Home RGB Bulb
+      display_categories: LIGHT
+    light.right_nursery_shelf:
+      name: Right Nursery Shelf
+      description: Magic Home RGB Bulb
+      display_categories: LIGHT
+###########################################
+###--------- Exterior Controls ---------###
+    switch.back_porch_light:
+      name: Back Porch
+      description: Wemos D1 Mini MQTT Back Porch Light Switch/Button.
+      display_categories: LIGHT
+    switch.dog_house_spot_light:
+      name: Dog House
+      description: ZW4102_03 Z-Wave Receptacle in the Large Building that controls the spot light overlooking the dog house.
+      display_categories: LIGHT
+    switch.large_building_lights:
+      name: Large Building
+      description: TP-Link Kasa Light Switch in the Large Building.
+      display_categories: LIGHT
+    switch.front_porch_light:
+      name: Front Porch
+      description: Z-Wave Front Porch Light Switch.
+      display_categories: LIGHT
+    lock.front_door_deadbolt:
+      name: Front Door Deadbolt
+      description: Front Door Schlage Z-Wave BE469 Deadbolt Lock.
+    switch.small_building_lights:
+      name: Small Building
+      description: TP-Link Kasa Light Switch in the Small Building.
+      display_categories: LIGHT
+    switch.outside_water_valve:
+      name: Outside Water
+      description: Wemos D1 Mini Controlled 12v Electric Valve
+      display_categories: SWITCH
+#    switch.domestic_water_valve:
+#      name: Domestic Water
+#      description: Wemos D1 Mini Controlled 12v Electric Valve
+#      display_categories: SWITCH
+    sensor.dog_house_temperature:
+      name: Dog House Temperature
+      description: Wemos D1 Mini Monitored DS18B20 Temperature Sensor
+      display_categories: TEMPERATURE_SENSOR
+    light.wled_front_roof_01:
+      name: Front Roof 1
+      description: 600 WS2812b LED Strip Lights
+      display_categories: LIGHT
+    light.wled_front_roof_02:
+      name: Front Roof 2
+      description: 300 WS2812b LED Strip Lights
+      display_categories: LIGHT
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###
+# https://developer.amazon.com/en-US/docs/alexa/device-apis/alexa-discovery.html#display-categories

@@ -1,0 +1,65 @@
+###########################################
+###########################################
+###########################################
+########### shell_commands.yaml ###########
+###########################################
+snapshots_clear_temp_folder: 'rm /config/www/surveillance/tmp/*.jpg'
+snapshots_clear_front_porch_folder: 'rm /config/www/surveillance/front_porch/*.jpg'
+snapshots_clear_back_porch_folder: 'rm /config/www/surveillance/back_porch/*.jpg'
+snapshots_clear_front_yard_folder: 'rm /config/www/surveillance/front_yard/*.jpg'
+snapshots_clear_back_yard_folder: 'rm /config/www/surveillance/back_yard/*.jpg'
+snapshots_clear_behind_building_folder: 'rm /config/www/surveillance/behind_building*.jpg'
+snapshots_clear_gate_entrance_folder: 'rm /config/www/surveillance/gate_entrance/*.jpg'
+###########################################
+###########################################
+###########################################
+living_room_roku_on: 'curl -X POST http://10.1.1.100:8060/keypress/PowerOn'
+living_room_roku_off: 'curl -X POST http://10.1.1.100:8060/keypress/PowerOff'
+living_room_roku_volume_up: 'curl -X POST http://10.1.1.100:8060/keypress/VolumeUp'
+living_room_roku_volume_down: 'curl -X POST http://10.1.1.100:8060/keypress/VolumeDown'
+living_room_roku_home: 'curl -X POST http://10.1.1.100:8060/keypress/Home'
+living_room_roku_reverse: 'curl -X POST http://10.1.1.100:8060/keypress/Rev'
+living_room_roku_forward: 'curl -X POST http://10.1.1.100:8060/keypress/For'
+living_room_roku_select: 'curl -X POST http://10.1.1.100:8060/keypress/Select'
+living_room_roku_left: 'curl -X POST http://10.1.1.100:8060/keypress/Left'
+living_room_roku_right: 'curl -X POST http://10.1.1.100:8060/keypress/Right'
+living_room_roku_down: 'curl -X POST http://10.1.1.100:8060/keypress/Down'
+living_room_roku_up: 'curl -X POST http://10.1.1.100:8060/keypress/Up'
+living_room_roku_back: 'curl -X POST http://10.1.1.100:8060/keypress/Back'
+living_room_roku_info: 'curl -X POST http://10.1.1.100:8060/keypress/Info'
+###########################################
+master_bedroom_roku_on: 'curl -X POST http://10.1.1.101:8060/keypress/PowerOn'
+master_bedroom_roku_off: 'curl -X POST http://10.1.1.101:8060/keypress/PowerOff'
+master_bedroom_roku_volume_up: 'curl -X POST http://10.1.1.101:8060/keypress/VolumeUp'
+master_bedroom_roku_volume_down: 'curl -X POST http://10.1.1.101:8060/keypress/VolumeDown'
+master_bedroom_roku_home: 'curl -X POST http://10.1.1.101:8060/keypress/Home'
+master_bedroom_roku_reverse: 'curl -X POST http://10.1.1.101:8060/keypress/Rev'
+master_bedroom_roku_forward: 'curl -X POST http://10.1.1.101:8060/keypress/For'
+master_bedroom_roku_select: 'curl -X POST http://10.1.1.101:8060/keypress/Select'
+master_bedroom_roku_left: 'curl -X POST http://10.1.1.101:8060/keypress/Left'
+master_bedroom_roku_right: 'curl -X POST http://10.1.1.101:8060/keypress/Right'
+master_bedroom_roku_down: 'curl -X POST http://10.1.1.101:8060/keypress/Down'
+master_bedroom_roku_up: 'curl -X POST http://10.1.1.101:8060/keypress/Up'
+master_bedroom_roku_back: 'curl -X POST http://10.1.1.101:8060/keypress/Back'
+master_bedroom_roku_info: 'curl -X POST http://10.1.1.101:8060/keypress/Info'
+###########################################
+guest_bedroom_roku_on: 'curl -X POST http://10.1.1.102:8060/keypress/PowerOn'
+guest_bedroom_roku_off: 'curl -X POST http://10.1.1.102:8060/keypress/PowerOff'
+guest_bedroom_roku_volume_up: 'curl -X POST http://10.1.1.102:8060/keypress/VolumeUp'
+guest_bedroom_roku_volume_down: 'curl -X POST http://10.1.1.102:8060/keypress/VolumeDown'
+guest_bedroom_roku_home: 'curl -X POST http://10.1.1.102:8060/keypress/Home'
+guest_bedroom_roku_reverse: 'curl -X POST http://10.1.1.102:8060/keypress/Rev'
+guest_bedroom_roku_forward: 'curl -X POST http://10.1.1.102:8060/keypress/For'
+guest_bedroom_roku_select: 'curl -X POST http://10.1.1.102:8060/keypress/Select'
+guest_bedroom_roku_left: 'curl -X POST http://10.1.1.102:8060/keypress/Left'
+guest_bedroom_roku_right: 'curl -X POST http://10.1.1.102:8060/keypress/Right'
+guest_bedroom_roku_down: 'curl -X POST http://10.1.1.102:8060/keypress/Down'
+guest_bedroom_roku_up: 'curl -X POST http://10.1.1.102:8060/keypress/Up'
+guest_bedroom_roku_back: 'curl -X POST http://10.1.1.102:8060/keypress/Back'
+guest_bedroom_roku_info: 'curl -X POST http://10.1.1.102:8060/keypress/Info'
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

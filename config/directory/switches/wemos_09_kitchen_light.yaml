@@ -1,0 +1,23 @@
+###########################################
+###########################################
+###########################################
+####### wemos_09_kitchen_light.yaml #######
+###########################################
+
+  - platform: mqtt
+    name: "Kitchen Light"
+    state_topic: "Wemos_09/stat/POWER1"
+    command_topic: "Wemos_09/cmnd/POWER1"
+    availability_topic: "Wemos_09/tele/LWT"
+    qos: 1
+    payload_on: "OFF"
+    payload_off: "ON"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

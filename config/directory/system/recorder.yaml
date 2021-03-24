@@ -1,0 +1,159 @@
+###########################################
+###########################################
+###########################################
+############### recorder.yaml #############
+###########################################
+db_url: mysql://nuc_hassio:WhiteDell-1937@core-mariadb/homeassistant?charset=utf8
+auto_purge: true
+purge_keep_days: 35
+###########################################
+include:
+  domains:
+    - person
+#    - logbook
+    - switch
+    - light
+  entities:
+    - climate.thermostat
+    - alarm_control_panel.security_system
+###########################################
+###########################################
+###########################################
+#######-----> Device Tracking <-----#######
+    - sensor.ios_tde_steps
+    - sensor.ios_sdm_steps
+    - sensor.android_sjj_geolocation
+    - sensor.ios_tde_geolocation
+    - sensor.ios_sdm_geolocation
+    - device_tracker.ipad_air_2
+    - device_tracker.ios_sdm
+    - device_tracker.ios_tde
+    - device_tracker.android_elizabeth_morgan
+    - device_tracker.android_beth_morgan
+    - device_tracker.android_seth_jennelle
+###########################################
+###########################################
+###########################################
+########-----> Environmental <-----########
+    - sensor.pond_temperature
+    - sensor.dog_house_temperature
+    - sensor.front_porch_sensor_temperature
+    - sensor.living_room_temperature
+    - sensor.living_room_humidity
+    - sensor.living_room_luminance
+    - sensor.nursery_temperature
+    - sensor.nursery_humidity
+    - sensor.nursery_luminance
+    - sensor.master_bedroom_temperature
+    - sensor.master_bedroom_humidity
+###########################################
+###########################################
+###########################################
+######-----> Door's & Window's <-----######
+    - lock.front_door_deadbolt
+    - binary_sensor.front_door
+    - binary_sensor.back_door
+    - binary_sensor.hallway_bathroom_window
+    - binary_sensor.kitchen_window
+    - binary_sensor.left_living_room_window
+    - binary_sensor.right_living_room_window
+    - binary_sensor.left_guest_bedroom_window
+    - binary_sensor.right_living_room_window
+    - binary_sensor.master_bathroom_window
+###########################################
+###########################################
+###########################################
+##########-----> Camera's <-----###########
+#    - binary_sensor.cctv_back_porch
+#    - binary_sensor.cctv_front_porch
+#    - binary_sensor.cctv_back_yard
+#    - binary_sensor.cctv_front_yard
+###########################################
+###########################################
+###########################################
+#######-----> Motion Sensor's <-----#######
+    - binary_sensor.kitchen_motion
+    - binary_sensor.living_room_motion
+    - binary_sensor.master_bedroom_motion
+    - binary_sensor.nursery_motion
+    - binary_sensor.crib_motion
+    - binary_sensor.hallway_motion
+    - binary_sensor.front_porch_motion
+    - binary_sensor.driveway_motion
+###########################################
+###########################################
+###########################################
+#######-----> Other Sensor's <-----########
+    - binary_sensor.washing_machine_status
+    - switch.outside_water_valve
+    - switch.domestic_water_valve
+###--------------------------------------###
+    - sensor.speed_test_download
+    - sensor.speed_test_upload
+    - sensor.speed_test_ping
+###--------------------------------------###
+    - sensor.coronavirus_deaths_usa
+    - sensor.coronavirus_deaths_global
+    - sensor.coronavirus_confirmed_global
+    - sensor.coronavirus_current_usa
+    - sensor.coronavirus_current_global
+    - sensor.coronavirus_confirmed_usa
+###########################################
+###########################################
+###########################################
+############-----> Energy <-----###########
+    - sensor.total_energy_usage_daily
+#    - sensor.total_energy_usage_monthly
+#    - sensor.total_energy_usage_quarterly
+#    - sensor.total_energy_usage_annually
+    - sensor.duke_energy_bill_daily
+#    - sensor.duke_energy_bill_monthly
+#    - sensor.duke_energy_bill_quarterly
+#    - sensor.duke_energy_bill_annually
+###########################################
+###########################################
+###########################################
+############-----> Water <-----############
+    - sensor.total_water_usage_daily
+    - sensor.total_water_usage_monthly
+    - sensor.total_water_usage_quarterly
+    - sensor.total_water_usage_annually
+    # FLUME v2.0 Reported Water Usage
+    - sensor.home_water_meter_usage_now
+    - sensor.home_water_meter_last_60_minutes
+    - sensor.home_water_meter_24_hours
+    - sensor.flume_sensor_home_current_month
+    - sensor.home_water_meter_today
+    - sensor.home_water_meter_current_week
+    - sensor.home_water_meter_current_month
+###########################################
+###########################################
+###########################################
+###########-----> Financial <-----#########
+    ### Market Value
+    - sensor.cryptoinfo_bitcoin_usd
+    - sensor.cryptoinfo_ethereum_usd
+    - sensor.cryptoinfo_litecoin_usd
+    - sensor.cryptoinfo_atomic_wallet_coin_usd
+    - sensor.cryptoinfo_basic_attention_token_usd
+    - sensor.cryptoinfo_cosmos_usd
+    - sensor.cryptoinfo_maker_usd
+    - sensor.cryptoinfo_ravencoin_usd
+    - sensor.cryptoinfo_stellar_usd
+    - sensor.cryptoinfo_tezos_usd
+    - sensor.cryptoinfo_cardano_usd
+###########################################
+###########################################
+###########################################
+############-----> Other <-----############
+    - switch.dog_house_heating_system
+    - switch.nursery_heater
+    - sensor.mycology_aquarium_air_temperature
+    - sensor.mycology_aquarium_air_humidity
+    - sensor.mycology_aquarium_water_temperature
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

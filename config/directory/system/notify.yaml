@@ -1,0 +1,49 @@
+###########################################
+###########################################
+###########################################
+############### notify.yaml ###############
+###########################################
+- name: 'iOS: TDE & SDM'
+  platform: group
+  services:
+    - service: mobile_app_sdm_iphone
+    - service: mobile_app_tde_iphone
+###########################################
+- name: 'iOS: All'
+  platform: group
+  services:
+    - service: mobile_app_sdm_iphone
+    - service: mobile_app_tde_iphone
+    - service: mobile_app_stevens_ipad
+###########################################
+- name: 'USA Household Inbox'
+  platform: smtp
+  server: smtp.gmail.com
+  port: 587
+  timeout: 30
+  sender: !secret hass_gmail_username
+  encryption: starttls
+  username: !secret hass_gmail_username
+  password: !secret hass_gmail_app_password-morgan_home
+  recipient: 
+    - !secret email_household_usa_mailbox
+  sender_name: Home Assistant
+###########################################
+- name: 'SDM Work Email'
+  platform: smtp
+  server: smtp.gmail.com
+  port: 587
+  timeout: 30
+  sender: !secret hass_gmail_username
+  encryption: starttls
+  username: !secret hass_gmail_username
+  password: !secret hass_gmail_app_password-morgan_home
+  recipient: 
+    - !secret email_sdm_work
+  sender_name: Home Assistant
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

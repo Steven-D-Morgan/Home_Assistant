@@ -1,0 +1,16 @@
+###########################################
+###########################################
+###########################################
+######### custom_alexa_media.yaml #########
+###########################################
+accounts:
+  - email: !secret amazon_username
+    password: !secret amazon_password
+    url: amazon.com
+    exclude_devices:
+      - Steven's Alexa Apps
+      - Tiffany's Alexa Apps
+      - This Device
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

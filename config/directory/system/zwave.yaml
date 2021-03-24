@@ -1,0 +1,17 @@
+###########################################
+###########################################
+###########################################
+############### zwave.yaml ################
+###########################################
+usb_path: /dev/serial/by-id/usb-0658_0200-if00
+#usb_path: /dev/serial/by-id/usb-Silicon_Labs_HubZ_Smart_Home_Controller_C1301422-if00-port0
+network_key: !secret zwave_network_key
+device_config: !include zwave_device_config.yaml
+polling_interval: 65000
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###
+# https://www.home-assistant.io/docs/z-wave/installation/

@@ -1,0 +1,27 @@
+###########################################
+###########################################
+###########################################
+##### template_flume_flow_status.yaml #####
+###########################################
+- platform: template
+  sensors:
+    water_flowing_status:
+      friendly_name: "Water Flow"
+      value_template: >-
+        {% if is_state('binary_sensor.flume_flow_status', 'on') %}
+          Running
+        {% else %}
+          Not Running
+        {% endif %}
+      entity_picture_template: >-
+        {% if is_state('binary_sensor.flume_flow_status', 'on') %}
+        mdi:water
+        {% else %}
+        mdi:water-off-outline
+        {% endif %}
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

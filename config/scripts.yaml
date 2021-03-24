@@ -1,0 +1,509 @@
+testing_mqtt_front_door_open:
+  alias: 'MQTT: Front Door - OPEN'
+  icon: mdi:door-open
+  mode: single
+  sequence:
+  - data:
+      payload: Open
+      topic: NodeMCU_02/security/reed1
+    service: mqtt.publish
+testing_mqtt_front_door_closed:
+  alias: 'MQTT: Front Door - CLOSED'
+  icon: mdi:door-closed
+  mode: single
+  sequence:
+  - data:
+      payload: Closed
+      topic: NodeMCU_02/security/reed1
+    service: mqtt.publish
+system_reload_themes:
+  alias: Reload Themes Config
+  icon: mdi:refresh
+  mode: single
+  sequence:
+  - data: {}
+    service: frontend.reload_themes
+i_love_you:
+  alias: I Love You!
+  sequence:
+  - service: notify.ios_tde_sdm
+    data:
+      message: Tiffany, I love you so much! <3
+  mode: single
+  icon: mdi:heart
+sec_triggered_wled:
+  alias: '[wLED] Mode: TRIGGERED'
+  sequence:
+  - service: light.turn_on
+    data: {}
+    entity_id: light.front_roof_01_wled
+  - service: light.turn_on
+    data: {}
+    entity_id: light.kitchen_cabinet_wled
+  - service: light.turn_on
+    data: {}
+    entity_id: light.front_roof_02_wled
+  - service: light.turn_on
+    data: {}
+    entity_id: light.living_room_tv_wled
+  - service: light.turn_on
+    data: {}
+    entity_id: light.master_bedroom_tv_wled
+  - service: wled.preset
+    data:
+      preset: 2
+    entity_id: light.kitchen_cabinet_wled
+  - service: wled.preset
+    data:
+      preset: 2
+    entity_id: light.master_bedroom_tv_wled
+  - service: wled.preset
+    data:
+      preset: 2
+    entity_id: light.living_room_tv_wled
+  - service: wled.preset
+    data:
+      preset: 2
+    entity_id: light.front_roof_01_wled
+  - service: wled.preset
+    data:
+      preset: 2
+    entity_id: light.front_roof_02_wled
+  mode: single
+  icon: mdi:led-strip-variant
+alexa_washing_machine_finished:
+  alias: '[ALEXA] Washing Machine: Finished'
+  sequence:
+  - service: media_player.volume_set
+    data:
+      data:
+        volume_level: '5.0'
+    entity_id: media_player.living_room_echo
+  - service: media_player.volume_set
+    data:
+      data:
+        volume_level: '5.0'
+    entity_id: media_player.kitchen_echo_dot
+  - service: media_player.volume_set
+    data:
+      data:
+        volume_level: '5.0'
+    entity_id: media_player.master_bedroom_echo_show
+  - service: notify.alexa_media_kitchen_echo_dot
+    data:
+      data:
+        type: tts
+      message: Woman! Go empty the washing machine!
+  - service: notify.alexa_media_living_room_echo
+    data:
+      data:
+        type: tts
+      message: Woman! Go empty the washing machine!
+  - service: notify.alexa_media_master_bedroom_echo_show
+    data:
+      data:
+        type: tts
+      message: Woman! Go empty the washing machine!
+  mode: single
+  icon: mdi:amazon
+v_gps_set_locations_on_startup:
+  alias: '[V_GPS] Set Locations on Startup'
+  sequence:
+  - data:
+      battery: 62
+      dev_id: sdm_device_tracker_01
+      gps:
+      - 35.1844805125013
+      - -80.92464923858644
+    service: device_tracker.see
+  - data:
+      battery: 84
+      dev_id: sdm_device_tracker_02
+      gps:
+      - 35.35982241648641
+      - -81.10680341720582
+    service: device_tracker.see
+  - data:
+      battery: 42
+      dev_id: sdm_device_tracker_03
+      gps:
+      - 35.145915444733255
+      - -80.9330177307129
+    service: device_tracker.see
+  - data:
+      battery: 49
+      dev_id: sdm_device_tracker_04
+      gps:
+      - 35.25512540103635
+      - -81.03782773017885
+    service: device_tracker.see
+  - data:
+      battery: 12
+      dev_id: sdm_device_tracker_05
+      gps:
+      - 35.448163775964275
+      - -81.00499749183656
+    service: device_tracker.see
+  - data:
+      battery: 72
+      dev_id: sdm_device_tracker_06
+      gps:
+      - 35.25113941924479
+      - -81.0296245437747
+    service: device_tracker.see
+  - data:
+      battery: 31
+      dev_id: sdm_device_tracker_type_07
+      gps:
+      - 35.273394132851315
+      - -81.1307910221847
+    service: device_tracker.see
+  - data:
+      battery: 94
+      dev_id: sdm_device_tracker_08
+      gps:
+      - 35.35499242190323
+      - -81.09014153480531
+    service: device_tracker.see
+  - data:
+      battery: 16
+      dev_id: sdm_device_tracker_09
+      gps:
+      - 35.2609074939998
+      - -81.11431360244752
+    service: device_tracker.see
+  mode: single
+  icon: mdi:earth
+wled_normal_mode:
+  alias: '[wLED] Mode: NORMAL'
+  sequence:
+  - service: wled.preset
+    data:
+      preset: 1
+    entity_id: light.wled_kitchen_cabinet
+  - service: wled.preset
+    data:
+      preset: 1
+    entity_id: light.wled_master_bedroom_tv
+  - service: wled.preset
+    data:
+      preset: 1
+    entity_id: light.wled_living_room_tv
+  - service: wled.preset
+    data:
+      preset: 1
+    entity_id: light.wled_front_roof_01
+  - service: wled.preset
+    data:
+      preset: 1
+    entity_id: light.wled_front_roof_02
+  - type: turn_off
+    device_id: 231688aece30f3d5ff59d4647e7c538c
+    entity_id: light.wled_front_roof_02
+    domain: light
+  - type: turn_off
+    device_id: 09926d361e18230606048af7ef068c7a
+    entity_id: light.wled_front_roof_01
+    domain: light
+  - type: turn_off
+    device_id: 4c33ee97990c29627fe83cbfccba43c6
+    entity_id: light.wled_master_bedroom_tv
+    domain: light
+  - type: turn_off
+    device_id: b9ecc31770e1fdfb21881a6aee478094
+    entity_id: light.wled_living_room_tv
+    domain: light
+  mode: single
+  icon: mdi:led-strip-variant
+email_front_porch_snapshot:
+  alias: '[EMAIL] Front Porch: Snapshot'
+  sequence:
+  - data:
+      data:
+        images:
+        - /config/www/surveillance/tmp/front_porch.jpg
+      message: Motion - Front Porch - {{now().strftime('%H:%M %m-%d-%Y')}}
+      title: Motion - Front Porch - {{now().strftime('%H:%M %m-%d-%Y')}}
+    service: notify.usa_household_inbox
+  mode: single
+  icon: mdi:mailbox
+system_snapshot_directory_delete:
+  alias: '[CAM] Clear Surveillance Subdirectory (TMP)'
+  sequence:
+  - service: shell_command.snapshots_clear_temp_folder
+    data: {}
+  mode: single
+  icon: mdi:trash-can
+camera_snapshot_front_porch:
+  alias: '[CAM] Snapshot: Front Porch'
+  sequence:
+  - service: camera.snapshot
+    data:
+      filename: /config/www/surveillance/front_porch/front_porch_{{ now ().month }}_{{
+        now ().day }}_{{ now ().year }}_{{ now ().hour }}_{{ now ().minute }}.jpg
+    entity_id: camera.front_porch
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: camera.snapshot
+    data:
+      filename: /config/www/surveillance/tmp/front_porch.jpg
+    entity_id: camera.front_porch
+  - service: camera.snapshot
+    data:
+      filename: \\10.1.1.240\Vault\Shared\Automated_Surveillance\front_porch_{{ now
+        ().month }}_{{ now ().day }}_{{ now ().year }}_{{ now ().hour }}_{{ now ().minute
+        }}.jpg
+    entity_id: camera.front_porch
+  mode: single
+  icon: mdi:cctv
+tts_alexa_set_volume:
+  alias: '[TTS] Alexa: Set Volume & Talk Test'
+  sequence:
+  - service: media_player.volume_set
+    data:
+      volume_level: '1.0'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 10
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 4
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '0.9'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 9
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 4
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '0.8'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 8
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 4
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '0.7'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 7
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '0.6'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 6
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '0.5'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 5
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '0.4'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 4
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '0.3'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 3
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '0.2'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 2
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '0.1'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: This is my volume at level 1
+  mode: single
+  icon: mdi:amazon
+notify:
+  alias: '[NOTIFY] Sound Notifications to iOS '
+  sequence:
+  - service: notify.mobile_app_iphone_xr
+    data:
+      message: Front Porch Motion Detected
+      data:
+        push:
+          sound: US-EN-Morgan-Freeman-Motion-Detected.wav
+  mode: single
+  icon: mdi:apple
+'1614401587093':
+  alias: '[TTS] Alexa: Front Door had been opened'
+  sequence:
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 25
+      milliseconds: 0
+  - service: media_player.volume_set
+    data:
+      volume_level: '1.0'
+    entity_id: media_player.kitchen_echo_dot
+  - service: notify.alexa_media
+    data:
+      target:
+      - media_player.kitchen_echo_dot
+      data:
+        type: announce
+      message: The Front Door has been opened!
+  - service: notify.mobile_app_iphone_xr
+    data:
+      message: The Front Door has been opened!
+  - service: notify.mobile_app_tde_iphone
+    data:
+      message: The Front Door has been opened!
+  mode: single
+  icon: mdi:amazon
+camera_clear_all_surveillance_subdirectories:
+  alias: '[CAM] Clear ALL Surveillance Subdirectories'
+  sequence:
+  - service: shell_command.snapshots_clear_temp_folder
+    data: {}
+  - service: shell_command.snapshots_clear_gate_entrance_folder
+    data: {}
+  - service: shell_command.snapshots_clear_front_yard_folder
+    data: {}
+  - service: shell_command.snapshots_clear_behind_building_folder
+    data: {}
+  - service: shell_command.snapshots_clear_back_yard_folder
+    data: {}
+  - service: shell_command.snapshots_clear_back_porch_folder
+    data: {}
+  - service: shell_command.snapshots_clear_front_porch_folder
+    data: {}
+  mode: single
+  icon: mdi:folder
+flux_led_nursery_night_lighting:
+  alias: '[FLUX_LED] Nursery: Night Lighting'
+  sequence:
+  - service: light.turn_on
+    data:
+      rgb_color:
+      - 0
+      - 6
+      - 41
+    entity_id: light.left_nursery_shelf
+  - service: light.turn_on
+    data:
+      rgb_color:
+      - 0
+      - 6
+      - 41
+    entity_id: light.right_nursery_shelf
+  - type: turn_on
+    device_id: 8980b2e908054f19978eb602c5a77c74
+    entity_id: switch.nursery_ceiling_fan
+    domain: switch
+  - type: turn_off
+    device_id: e37e41d4a2b97c0702bec7f8a6c83b5a
+    entity_id: switch.nursery_closet_light_light
+    domain: switch
+  - type: turn_off
+    device_id: 8217405c133c6b5a410991934aa9b5c7
+    entity_id: switch.nursery_ceiling_light
+    domain: switch
+  mode: single
+  icon: mdi:lightbulb

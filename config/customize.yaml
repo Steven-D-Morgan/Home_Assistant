@@ -1,0 +1,164 @@
+person.tiffany_elkovich:
+  entity_picture: https://www.life360.com/img/user_images/aeb92264-6e19-439a-bbe1-20ae02e1722d/c03b6473-d52e-45ad-ae7b-bb5cff81abed.jpg?fd=2
+device_tracker.life360_tiffany:
+  friendly_name: 'TDE: Life360'
+switch.dining_room_light:
+  icon: mdi:ceiling-light
+switch.living_room_floor_lamp:
+  icon: mdi:floor-lamp
+switch.front_porch_light:
+  icon: mdi:outdoor-lamp
+switch.intel_nuc8i3beh:
+  icon: mdi:home-assistant
+switch.living_room_entry_lamp:
+  icon: mdi:lamp
+switch.living_room_recliner_lamp:
+  icon: mdi:lamp
+switch.hallway_light:
+  icon: mdi:ceiling-light
+switch.large_building_lights:
+  icon: mdi:lightbulb-multiple
+switch.kitchen_light:
+  icon: mdi:ceiling-light
+switch.washing_machine:
+  icon: mdi:washing-machine
+group.sirens:
+  entity_picture: /local/images/animated/security_siren.gif
+climate.thermostat:
+  friendly_name: Thermostat
+sensor.next_rocket_all:
+  friendly_name: Rocket Launch
+  entity_picture: /local/images/animated/rocket.gif
+switch.christmas_tree:
+  entity_picture: /local/images/device_specific/christmas_tree.png
+switch.dog_house_spot_light:
+  entity_picture: /local/images/device_specific/dog_house.png
+switch.dog_house_heating_system:
+  entity_picture: /local/images/device_specific/dog_house.png
+sensor.time:
+  entity_picture: /local/images/animated/clock.gif
+sensor.ups_apc_600_status:
+  entity_picture: /local/images/device_specific/ups_apc.png
+sensor.ups_cyberpower_1500_status:
+  entity_picture: /local/images/device_specific/ups_cyber_power_1500_pfclcd.png
+sensor.coronavirus_confirmed_global:
+  entity_picture: /local/images/animated/globe.gif
+sensor.coronavirus_deaths_global:
+  entity_picture: /local/images/general/tombstone.jpg
+sensor.coronavirus_current_global:
+  entity_picture: /local/images/general/coronavirus.png
+sensor.coronavirus_confirmed_usa:
+  entity_picture: /local/images/animated/flag_usa.gif
+sensor.coronavirus_deaths_usa:
+  entity_picture: /local/images/general/tombstone.jpg
+sensor.coronavirus_current_usa:
+  entity_picture: /local/images/general/coronavirus.png
+sensor.cryptocurrency_total_value:
+  entity_picture: /local/images/animated/money_present.gif
+sensor.cryptoinfo_atomic_wallet_coin_usd:
+  friendly_name: Atomic Wallet Coin (AWC)
+  entity_picture: https://atomicwallet.io/wp-content/uploads/2020/09/atomic_wallet_logo_dark_rounded_2.png
+sensor.cryptoinfo_basic_attention_token_usd:
+  friendly_name: Basic Attention Token (BAT)
+  entity_picture: /local/images/currency/basic_attention_token_bat.png
+sensor.cryptoinfo_cosmos_usd:
+  friendly_name: Cosmos (ATOM)
+  entity_picture: /local/images/currency/cosmos_atom.png
+sensor.cryptoinfo_stellar_usd:
+  friendly_name: Stellar Lumens (XLM)
+  entity_picture: /local/images/currency/stellar_lumens_xlm.png
+sensor.cryptoinfo_maker_usd:
+  friendly_name: Maker (MKR)
+  entity_picture: /local/images/currency/maker_mkr.png
+sensor.cryptoinfo_ravencoin_usd:
+  friendly_name: Ravencoin (RVN)
+  entity_picture: /local/images/currency/ravencoin_rvn.png
+sensor.cryptoinfo_ethereum_usd:
+  friendly_name: Ethereum (ETH)
+  entity_picture: /local/images/currency/ethereum_eth.png
+sensor.cryptoinfo_bitcoin_usd:
+  friendly_name: Bitcoin (BTC)
+  entity_picture: /local/images/currency/bitcoin_btc.png
+sensor.cryptoinfo_litecoin_usd:
+  friendly_name: Litecoin (LTC)
+  unit_of_measurement: ​USD
+  entity_picture: /local/images/currency/litecoin_ltc.png
+sensor.cryptoinfo_tezos_usd:
+  friendly_name: Tezos (XTZ)
+  entity_picture: /local/images/currency/tezos_xtz.png
+sensor.cryptoinfo_cardano_usd:
+  friendly_name: Cardano (ADA)
+  entity_picture: /local/images/currency/cardano_ada.png
+sensor.cryptoinfo_yearn_finance_usd:
+  friendly_name: Yearn.Finance (YFY)
+  entity_picture: https://cryptologos.cc/logos/yearn-finance-yfi-logo.png
+sensor.cryptoinfo_binancecoin_usd:
+  friendly_name: Binance Coin (BNB)
+  entity_picture: /local/images/currency/binance_coin_bnb.png
+sensor.crypto_value_bitcoin_btc:
+  entity_picture: /local/images/currency/bitcoin_btc.png
+sensor.crypto_value_cardano_ada:
+  entity_picture: /local/images/currency/cardano_ada.png
+sensor.crypto_value_atomic_wallet_coin_awc:
+  entity_picture: https://atomicwallet.io/wp-content/uploads/2020/09/atomic_wallet_logo_dark_rounded_2.png
+sensor.crypto_value_basic_attention_token_bat:
+  entity_picture: /local/images/currency/basic_attention_token_bat.png
+sensor.crypto_value_yearn_finance_yfy:
+  entity_picture: https://cryptologos.cc/logos/yearn-finance-yfi-logo.png
+sensor.crypto_value_binance_coin_bnb:
+  entity_picture: /local/images/currency/binance_coin_bnb.png
+sensor.crypto_value_ethereum_eth:
+  entity_picture: /local/images/currency/ethereum_eth.png
+sensor.crypto_value_litecoin_ltc:
+  entity_picture: /local/images/currency/litecoin_ltc.png
+sensor.crypto_value_maker_mkr:
+  entity_picture: /local/images/currency/maker_mkr.png
+sensor.crypto_value_ravencoin_rvn:
+  entity_picture: /local/images/currency/ravencoin_rvn.png
+sensor.crypto_value_stellar_lumens_xlm:
+  entity_picture: /local/images/currency/stellar_lumens_xlm.png
+sensor.crypto_value_tezos_xtz:
+  entity_picture: /local/images/currency/tezos_xtz.png
+sensor.crypto_value_district0x_dnt:
+  entity_picture: /local/images/currency/district0x_dnt.png
+sensor.total_energy_usage_daily:
+  friendly_name: Energy Today
+  entity_picture: /local/images/animated/lightning_bolt.gif
+sensor.total_energy_usage_monthly:
+  friendly_name: Energy Usage (Monthly)
+  entity_picture: /local/images/animated/lightning_bolt.gif
+sensor.total_energy_usage_quarterly:
+  friendly_name: Energy Usage (Quarterly)
+  entity_picture: /local/images/animated/lightning_bolt.gif
+sensor.total_energy_usage_annually:
+  friendly_name: Energy Usage (Annual)
+  entity_picture: /local/images/animated/lightning_bolt.gif
+sensor.total_water_usage_daily:
+  friendly_name: Water Usage (Daily)
+  entity_picture: https://shivashaktibhava.files.wordpress.com/2017/10/shua.gif?w=640
+  unit_of_measurement: Gallons
+  icon: mdi:water
+sensor.total_water_usage_monthly:
+  friendly_name: Water Usage (Monthly)
+  entity_picture: https://shivashaktibhava.files.wordpress.com/2017/10/shua.gif?w=640
+  unit_of_measurement: Gallons
+  icon: mdi:water
+sensor.total_water_usage_quarterly:
+  friendly_name: Water Usage (Quarterly)
+  entity_picture: https://shivashaktibhava.files.wordpress.com/2017/10/shua.gif?w=640
+  unit_of_measurement: Gallons
+sensor.total_water_usage_annually:
+  friendly_name: Water Usage (Annual)
+  entity_picture: https://shivashaktibhava.files.wordpress.com/2017/10/shua.gif?w=640
+  unit_of_measurement: Gallons
+  icon: mdi:water
+sensor.duke_energy_cost_kwh_fee:
+  friendly_name: Duke Energy $/kWh
+  entity_picture: https://g.foolcdn.com/art/companylogos/square/duk.png
+switch.outside_water:
+  device_class: switch
+  icon: mdi:valve
+sensor.duke_energy_bill_daily:
+  entity_picture: /local/images/currency/usd_dollar.png
+sensor.duke_energy_bill_monthly:
+  entity_picture: /local/images/currency/usd_dollar.png

@@ -1,0 +1,196 @@
+- name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: !secret home_radius
+  icon: mdi:castle
+###########################################
+- name: Booth Home
+  latitude: !secret booth_home_latitude
+  longitude: !secret booth_home_longitude
+  radius: !secret booth_home_radius
+  icon: mdi:donkey
+###########################################
+- name: Mom & Jeffs
+  latitude: !secret jeff_roberts_home_latitude
+  longitude: !secret jeff_roberts_home_longitude
+  radius: !secret jeff_roberts_home_radius
+  icon: mdi:home-outline
+###########################################
+- name: Jimmy Love (Home)
+  latitude: !secret jll_home_latitude
+  longitude: !secret jll_home_longitude
+  radius: !secret jll_home_radius
+  icon: mdi:home-outline
+###########################################
+- name: Jimmy Love (Shop)
+  longitude: !secret jll_shop_longitude
+  latitude: !secret jll_shop_latitude
+  radius: !secret jll_shop_radius
+  icon: mdi:wrench
+###########################################
+- name: Lowes (Denver, NC)
+  latitude: !secret lowes_denver_latitude
+  longitude: !secret lowes_denver_longitude
+  radius: !secret lowes_denver_radius
+  icon: mdi:hammer
+###########################################
+- name: Lowes (Belmont, NC)
+  latitude: !secret lowes_belmont_latitude
+  longitude: !secret lowes_belmont_longitude
+  radius: !secret lowes_belmont_radius
+  icon: mdi:hammer
+###########################################
+- name: Walmart (Belmont, NC)
+  latitude: !secret walmart_belmont_latitude
+  longitude: !secret walmart_belmont_longitude
+  radius: !secret walmart_belmont_radius
+  icon: mdi:hammer-screwdriver
+###########################################
+- name: Bi-Lo (Stanley, NC)
+  latitude: !secret bilo_stanley_latitude
+  longitude: !secret bilo_stanley_longitude
+  radius: !secret bilo_stanley_radius
+  icon: mdi:map-marker
+###########################################
+- name: Tiny Tots (Stanley, NC)
+  latitude: !secret tiny_tots_latitude
+  longitude: !secret tiny_tots_longitude
+  radius: !secret tiny_tots_radius
+  icon: mdi:baby-bottle-outline
+###########################################
+- name: Hill Crest Gardens Cemetary
+  latitude: !secret hill_crest_gardens_cemetary_latitude
+  longitude: !secret hill_crest_gardens_cemetary_longitude
+  radius: !secret hill_crest_gardens_cemetary_radius
+  icon: mdi:grave-stone
+###########################################
+- name: Lowes (South Tryon)
+  latitude: !secret lowes_south_tryon_latitude
+  longitude: !secret lowes_south_tryon_longitude
+  radius: !secret lowes_south_tryon_radius
+  icon: mdi:hammer
+###########################################
+- name: PetSmart (Gastonia, NC)
+  latitude: !secret petsmart_gastonia_latitude
+  longitude: !secret petsmart_gastonia_longitude
+  radius: !secret petsmart_gastonia_radius
+  icon: mdi:fishbowl
+###########################################
+- name: Alexis Fire Department
+  latitude: !secret alexis_fire_department_latitude
+  longitude: !secret alexis_fire_department_longitude
+  radius: !secret alexis_fire_department_radius
+  icon: mdi:fire
+###########################################
+- name: Sake Express (Mt. Holly, NC)
+  latitude: !secret sake_express_mount_holly_latitude
+  longitude: !secret sake_express_mount_holly_longitude
+  radius: !secret sake_express_mount_holly_radius
+  icon: mdi:food
+###########################################
+- name: Toby Medders (HOME)
+  latitude: !secret toby_medders_latitude
+  longitude: !secret toby_medders_longitude
+  radius: !secret toby_medders_radius
+  icon: mdi:home-outline
+###########################################
+- name: CVS (Belmont, NC)
+  latitude: !secret cvs_belmont_latitude
+  longitude: !secret cvs_belmont_longitude
+  radius: !secret cvs_belmont_radius
+  icon: mdi:prescription
+###########################################
+# Cemetary in Uptown Charlotte Tiffany & I found alot of Buizel's
+- name: Elmwood Cemetary
+  latitude: !secret elmwood_cemetery_latitude
+  longitude: !secret elmwood_cemetery_longitude
+  radius: !secret elmwood_cemetery_radius
+  icon: mdi:pokeball
+###########################################
+- name: Uptown Charlotte
+  latitude: !secret uptown_charlotte_latitude
+  longitude: !secret uptown_charlotte_longitude
+  radius: !secret uptown_charlotte_radius
+  icon: mdi:city-variant-outline
+###########################################
+- name: Myrtle Beach
+  latitude: !secret myrtle_beach_latitude
+  longitude: !secret myrtle_beach_longitude
+  radius: !secret myrtle_beach_radius
+  icon: mdi:beach
+###########################################
+- name: North Myrtle Beach
+  latitude: !secret north_myrtle_beach_latitude
+  longitude: !secret north_myrtle_beach_longitude
+  radius: !secret north_myrtle_beach_radius
+  icon: mdi:beach
+###########################################
+- name: Will's (Stanley, NC)
+  latitude: !secret wills_gas_station_stanley_nc_latitude
+  longitude: !secret wills_gas_station_stanley_nc_longitude
+  radius: !secret wills_gas_station_stanley_nc_radius
+  icon: mdi:gas-station
+###########################################
+- name: Marriott (Charleston, SC)
+  latitude: !secret spring_hill_marriott_charleston_sc_latitude
+  longitude: !secret spring_hill_marriott_charleston_sc_longitude
+  radius: !secret spring_hill_marriott_charleston_sc_radius
+  icon: mdi:bed-empty
+###########################################
+- name: Charleston Crab House
+  latitude: !secret charleston_crab_house_latitude
+  longitude: !secret charleston_crab_house_longitude
+  radius: !secret charleston_crab_house_radius
+  icon: mdi:fish
+###########################################
+- name: Sunset Beach, North Carolina
+  latitude: !secret sunset_beach_nc_latitude
+  longitude: !secret sunset_beach_nc_longitude
+  radius: !secret sunset_beach_nc_radius
+  icon: mdi:beach
+###########################################
+- name: Ocean Isle Beach, North Carolina
+  latitude: !secret ocean_isle_beach_nc_latitude
+  longitude: !secret ocean_isle_beach_nc_longitude
+  radius: !secret ocean_isle_beach_nc_radius
+  icon: mdi:beach
+###########################################
+- name: Holden Beach, North Carolina
+  latitude: !secret holden_beach_nc_latitude
+  longitude: !secret holden_beach_nc_longitude
+  radius: !secret holden_beach_nc_radius
+  icon: mdi:beach
+###########################################
+- name: Oak Island, North Carolina
+  latitude: !secret oak_island_nc_latitude
+  longitude: !secret oak_island_nc_longitude
+  radius: !secret oak_island_nc_radius
+  icon: mdi:beach
+###########################################
+- name: Vanguard
+  latitude: !secret vanguard_1_north_falls_latitude
+  longitude: !secret vanguard_1_north_falls_longitude
+  radius: !secret vanguard_1_north_falls_radius
+  icon: mdi:office-building
+###########################################
+- name: (Vanguard) Orion
+  latitude: !secret vanguard_west_campus_latitude
+  longitude: !secret vanguard_west_campus_longitude
+  radius: !secret vanguard_west_campus_radius
+  icon: mdi:office-building
+
+- name: TDE Work (Gastonia)
+  latitude: !secret tde_work_gastonia_latitude
+  longitude: !secret tde_work_gastonia_longitude
+  radius: !secret tde_work_gastonia_radius
+  icon: mdi:tooth
+
+- name: TDE Work (Mooresville)
+  latitude: !secret tde_work_mooresville_latitude
+  longitude: !secret tde_work_mooresville_longitude
+  radius: !secret tde_work_mooresville_radius
+  icon: mdi:tooth
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

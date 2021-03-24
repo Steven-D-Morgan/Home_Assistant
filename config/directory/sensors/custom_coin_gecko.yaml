@@ -1,0 +1,102 @@
+###########################################
+###########################################
+###########################################
+######### custom_coin_gecko.yaml ##########
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "bitcoin"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 3
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "ethereum"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 5
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "litecoin"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 15
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "tezos"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 3
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "basic-attention-token"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 15
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "stellar"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 15
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "cosmos"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 5
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "maker"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 15
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "ravencoin"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 15
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "atomic-wallet-coin"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 15
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "cardano"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 3
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "yearn-finance"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 3
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "binancecoin"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 15
+###########################################
+- platform: cryptoinfo
+  cryptocurrency_name: "district0x"
+  currency_name: "usd"
+  multiplier: 1
+  update_frequency: 5
+  
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###
+# https://api.coingecko.com/api/v3/coins/list
+###########################################
+#- platform: cryptoinfo
+#  cryptocurrency_name: "ethereum"  (default = "bitcoin")
+#  currency_name: "usd"             (default = "usd")
+#  multiplier: 1                    (default = 1) the currency value multiplied by this number
+#  update_frequency: 15    

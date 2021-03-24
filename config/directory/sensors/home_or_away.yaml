@@ -1,0 +1,17 @@
+###########################################
+###########################################
+###########################################
+############# home_or_away.yaml ###########
+###########################################
+- platform: template
+  sensors:
+    steven_morgan_home_status:
+      value_template: "{{ 'Home' if is_state('person.steven_morgan','home') else 'Away' }}"
+    tiffany_elkovich_home_status:
+      value_template: "{{ 'Home' if is_state('person.tiffany_elkovich','home') else 'Away' }}"
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

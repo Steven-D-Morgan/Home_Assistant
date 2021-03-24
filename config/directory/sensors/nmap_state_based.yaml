@@ -1,0 +1,203 @@
+###########################################
+###########################################
+###########################################
+########## nmap__state_based.yaml #########
+- platform: template
+  sensors:
+    network_cctv_nursery_status:
+      friendly_name: "CCTV: Nursery"
+      value_template: >-
+        {% if is_state('binary_sensor.nmap_nursery_camera', 'on') %}
+          Online
+        {% else %}
+          Offline
+        {% endif %}
+      entity_picture_template: >-
+        {% if is_state('binary_sensor.nmap_nursery_camera', 'on') %}
+        /local/images/animated/cctv_camera.gif
+        {% else %}
+        /local/images/general/device_offline.png
+        {% endif %}
+###########################################
+    network_cctv_living_room_status:
+      friendly_name: "CCTV: Living Room"
+      value_template: >-
+        {% if is_state('binary_sensor.nmap_living_room_camera', 'on') %}
+          Online
+        {% else %}
+          Offline
+        {% endif %}
+      entity_picture_template: >-
+        {% if is_state('binary_sensor.nmap_living_room_camera', 'on') %}
+        /local/images/animated/cctv_camera.gif
+        {% else %}
+        /local/images/general/device_offline.png
+        {% endif %}
+###########################################
+#    network_cctv_back_yard_status:
+#      friendly_name: "CCTV: Back Yard"
+#      value_template: >-
+#        {% if is_state('binary_sensor.nmap_back_yard_camera', 'on') %}
+#          Online
+#        {% else %}
+#          Offline
+#        {% endif %}
+#      entity_picture_template: >-
+#        {% if is_state('binary_sensor.nmap_back_yard_camera', 'on') %}
+#        /local/images/animated/cctv_camera.gif
+#        {% else %}
+#        /local/images/general/device_offline.png
+#        {% endif %}
+###########################################
+#    network_cctv_front_yard_status:
+#      friendly_name: "CCTV: Front Yard"
+#      value_template: >-
+#        {% if is_state('binary_sensor.nmap_front_yard_camera', 'on') %}
+#          Online
+#        {% else %}
+#          Offline
+#        {% endif %}
+#      entity_picture_template: >-
+#        {% if is_state('binary_sensor.nmap_front_yard_camera', 'on') %}
+#        /local/images/animated/cctv_camera.gif
+#        {% else %}
+#        /local/images/general/device_offline.png
+#        {% endif %}
+###########################################
+#    network_cctv_front_porch_status:
+#      friendly_name: "CCTV: Front Porch"
+#      value_template: >-
+#        {% if is_state('binary_sensor.nmap_front_porch_camera', 'on') %}
+#          Online
+#        {% else %}
+#          Offline
+#        {% endif %}
+#      entity_picture_template: >-
+#        {% if is_state('binary_sensor.nmap_front_porch_camera', 'on') %}
+#        /local/images/animated/cctv_camera.gif
+#        {% else %}
+#        /local/images/general/device_offline.png
+#        {% endif %}
+###########################################
+#    network_cctv_back_porch_status:
+#      friendly_name: "CCTV: Back Porch"
+#      value_template: >-
+#        {% if is_state('binary_sensor.nmap_back_porch_camera', 'on') %}
+#          Online
+#        {% else %}
+#          Offline
+#        {% endif %}
+#      entity_picture_template: >-
+#        {% if is_state('binary_sensor.nmap_back_porch_camera', 'on') %}
+#        /local/images/animated/cctv_camera.gif
+#        {% else %}
+#        /local/images/general/device_offline.png
+#        {% endif %}
+###########################################
+#    network_cctv_gate_entrance_status:
+#      friendly_name: "CCTV: Gate Entrance"
+#      value_template: >-
+#        {% if is_state('binary_sensor.nmap_gate_entrance_camera', 'on') %}
+#          Online
+#        {% else %}
+#          Offline
+#        {% endif %}
+#      entity_picture_template: >-
+#        {% if is_state('binary_sensor.nmap_gate_entrance_camera', 'on') %}
+#        /local/images/animated/cctv_camera.gif
+#        {% else %}
+#        /local/images/general/device_offline.png
+#        {% endif %}
+###########################################
+#    network_cctv_back_fence_status:
+#      friendly_name: "CCTV: Back Fence"
+#      value_template: >-
+#        {% if is_state('binary_sensor.nmap_back_fence_camera', 'on') %}
+#          Online
+#        {% else %}
+#          Offline
+#        {% endif %}
+#      entity_picture_template: >-
+#        {% if is_state('binary_sensor.nmap_back_fence_camera', 'on') %}
+#        /local/images/animated/cctv_camera.gif
+#        {% else %}
+#        /local/images/general/device_offline.png
+#        {% endif %}
+###########################################
+    network_amcrest_nvr_status:
+      friendly_name: "CCTV: Amcrest NVR"
+      value_template: >-
+        {% if is_state('binary_sensor.nmap_amcrest_nvr', 'on') %}
+          Online
+        {% else %}
+          Offline
+        {% endif %}
+      entity_picture_template: >-
+        {% if is_state('binary_sensor.nmap_amcrest_nvr', 'on') %}
+        /local/images/animated/cctv_camera.gif
+        {% else %}
+        /local/images/general/device_offline.png
+        {% endif %}
+###########################################
+    network_netgear_wax610_status:
+      friendly_name: "Netgear WAX610"
+      value_template: >-
+        {% if is_state('binary_sensor.nmap_netgear_wax610_access_point', 'on') %}
+          Online
+        {% else %}
+          Offline
+        {% endif %}
+      entity_picture_template: >-
+        {% if is_state('binary_sensor.nmap_netgear_wax610_access_point', 'on') %}
+        https://telsys.co.za/wp-content/uploads/2019/10/wifi.gif
+        {% else %}
+        /local/images/general/device_offline.png
+        {% endif %}
+###########################################
+    network_pfsense_firewall_status:
+      friendly_name: "Netgear WAX610"
+      value_template: >-
+        {% if is_state('binary_sensor.nmap_pfsense_firewall', 'on') %}
+          Online
+        {% else %}
+          Offline
+        {% endif %}
+      entity_picture_template: >-
+        {% if is_state('binary_sensor.nmap_pfsense_firewall', 'on') %}
+        https://i.gifer.com/YIgb.gif
+        {% else %}
+        /local/images/general/device_offline.png
+        {% endif %}
+###########################################
+#    network_hades_switch_status:
+#      friendly_name: "Netgear WAX610"
+#      value_template: >-
+#        {% if is_state('binary_sensor.nmap_hades_switch', 'on') %}
+#          Online
+#        {% else %}
+#          Offline
+#        {% endif %}
+#      entity_picture_template: >-
+#        {% if is_state('binary_sensor.nmap_hades_switch', 'on') %}
+#        https://www.animatedimages.org/data/media/56/animated-computer-image-0040.gif
+#        {% else %}
+#        /local/images/general/device_offline.png
+#        {% endif %}
+###########################################
+#    network_poseidon_switch_status:
+#      friendly_name: "Poseidon Switch"
+#      value_template: >-
+#        {% if is_state('binary_sensor.nmap_poseidon_switch', 'on') %}
+#          Online
+#        {% else %}
+#          Offline
+#        {% endif %}
+#      entity_picture_template: >-
+#        {% if is_state('binary_sensor.nmap_poseidon_switch', 'on') %}
+#        https://www.animatedimages.org/data/media/56/animated-computer-image-0040.gif
+#        {% else %}
+#        /local/images/general/device_offline.png
+#        {% endif %}
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

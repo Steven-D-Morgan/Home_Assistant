@@ -1,0 +1,19 @@
+###########################################
+###########################################
+###########################################
+######## wemos_07_kitchen_pir.yaml ########
+###########################################
+
+- platform: mqtt
+  name: Kitchen Motion
+  state_topic: Wemos_07/stat/PIR1
+  payload_on: "ON"
+  payload_off: "OFF"
+  device_class: motion
+  off_delay: 5
+###########################################
+# Rule3 on Switch3#state=1 do publish Wemos_07/stat/PIR1 ON endon on Switch3#state=0 do Publish Wemos_07/stat/PIR1 OFF endon
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

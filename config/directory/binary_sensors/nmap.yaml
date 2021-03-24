@@ -1,0 +1,106 @@
+###########################################
+###########################################
+###########################################
+################ nmap.yaml ################
+###########################################
+#--------------- CAMERA'S ----------------#
+- platform: ping
+  host: !secret LAN_IP_230
+  name: 'nMap: Nursery Camera'
+  count: 3
+  scan_interval: 300
+###########################################
+- platform: ping
+  host: !secret LAN_IP_231
+  name: 'nMap: Back Yard Camera'
+  count: 3
+  scan_interval: 310
+###########################################
+- platform: ping
+  host: !secret LAN_IP_232
+  name: 'nMap: Front Yard Camera'
+  count: 3
+  scan_interval: 320
+###########################################
+- platform: ping
+  host: !secret LAN_IP_233
+  name: 'nMap: Back Porch Camera'
+  count: 3
+  scan_interval: 330
+###########################################
+- platform: ping
+  host: !secret LAN_IP_234
+  name: 'nMap: Front Porch Camera'
+  count: 3
+  scan_interval: 340
+###########################################
+- platform: ping
+  host: !secret LAN_IP_235
+  name: 'nMap: Living Room Camera'
+  count: 3
+  scan_interval: 350
+###########################################
+- platform: ping
+  host: !secret LAN_IP_236
+  name: 'nMap: Gate Entrance Camera'
+  count: 3
+  scan_interval: 360
+###########################################
+- platform: ping
+  host: !secret LAN_IP_237
+  name: 'nMap: Back Fence Camera'
+  count: 3
+  scan_interval: 370
+###########################################
+- platform: ping
+  host: !secret LAN_IP_248
+  name: 'nMap: Amcrest NVR'
+  count: 3
+  scan_interval: 120
+###########################################
+###########################################
+###########################################
+#------------ Network Devices ------------#
+- platform: ping
+  host: !secret LAN_IP_240
+  name: 'nMap: TrueNAS Server'
+  count: 3
+  scan_interval: 308
+###########################################
+- platform: ping
+  host: !secret LAN_IP_241
+  name: 'nMap: Plex Server'
+  count: 3
+  scan_interval: 317
+###########################################
+- platform: ping
+  host: !secret LAN_IP_250
+  name: 'nMap: pfSense Firewall'
+  count: 3
+  scan_interval: 341
+###########################################
+- platform: ping
+  host: !secret LAN_IP_251
+  name: 'nMap: Netgear WAX610 Access Point'
+  count: 3
+  scan_interval: 349
+###########################################
+- platform: ping
+  host: !secret LAN_IP_252
+  # Behind Living Room TV
+  name: 'nMap: Poseidon Switch'
+  count: 3
+  scan_interval: 358
+###########################################
+- platform: ping
+  host: !secret LAN_IP_253
+  # Master Bedroom Desk
+  name: 'nMap: Hades Switch'
+  count: 3
+  scan_interval: 369
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

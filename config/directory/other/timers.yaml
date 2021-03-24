@@ -1,0 +1,39 @@
+###########################################
+###########################################
+###########################################
+############### timers.yaml ###############
+###########################################
+
+#washing_machine_cycle:
+#  duration: '00:55:00'
+#  name: 'Washing Machine Cycle'
+#  icon: mdi:washing-machine
+
+generic_1_minute:
+  duration: '00:01:00'
+  name: '1 Minute Timer'
+
+generic_3_minutes:
+  duration: '00:03:00'
+  name: '3 Minute Timer'
+
+generic_5_minutes:
+  duration: '00:05:00'
+  name: '5 Minute Timer'
+
+generic_10_minutes:
+  duration: '00:10:00'
+  name: '10 Minute Timer'
+
+front_porch_motion_light_on_duration:
+  duration: '00:10:00'
+  name: 'Timer: Motion - Front Porch Light (ON)'
+
+outside_water_open_dog_bowl_fill:
+  duration: '00:02:00'
+  name: 'Timer: Outside Water Valve - Dog Bowl (FILL)'
+
+
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

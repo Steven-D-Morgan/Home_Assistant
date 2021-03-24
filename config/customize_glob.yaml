@@ -1,0 +1,86 @@
+"binary_sensor.*_motion":
+  device_class: motion
+"binary_sensor.cctv_*":
+  icon: mdi:cctv
+  device_class: connectivity
+"binary_sensor.*_door":
+  device_class: door
+"binary_sensor.*_window":
+  device_class: window
+
+
+
+
+
+"device_tracker.ios_*":
+  icon: mdi:apple
+"script._*":
+  entity_picture: https://cdn.iconscout.com/icon/premium/png-256-thumb/programming-script-503834.png
+
+
+
+
+"light.*wled_":
+#  entity_picture: https://cdn.shopify.com/s/files/1/0470/8785/products/chase_grande.gif?v=1530300559
+  icon: mdi:led-strip-variant
+
+"sensor.wemos_*":
+  icon: mdi:cog-outline
+"sensor.*_temperature":
+  icon: mdi:temperature-fahrenheit
+  device_class: temperature
+"sensor.*_humidity":
+  icon: mdi:percent
+  device_class: humidity
+"sensor.*_luminance":
+  device_class: illuminance
+  unit_of_measurement: lux
+"sensor.*_geolocation":
+  icon: mdi:earth
+
+
+
+
+
+"switch.*_vanity":
+  icon: mdi:vanity-light
+"switch.*_light":
+  icon: mdi:lightbulb
+"switch.*_lights":
+  icon: mdi:lightbulb-multiple
+"switch.*_fan":
+  entity_picture: https://members.tripod.com/~HANDING/MOVING_FAN_2.gif
+"switch.*_heater":
+  icon: mdi:radiator
+  device_class: switch
+"switch.turtle_*":
+#    entity_picture: 'https://media.giphy.com/media/KZRhbalLT4yKO1g3sd/giphy.gif'
+  entity_picture: '/local/images/animated/turtle.webp'
+"switch.*_refrigerator":
+  icon: mdi:fridge
+  device_class: switch
+"switch.*_exhaust":
+  entity_picture: ''
+
+
+
+
+"zone.vanguard_*":
+  entity_picture: 'https://www.fixedincomenews.com.au/wp-content/uploads/2020/03/vanguardlogo.png'
+"zone.aldi_*":
+  entity_picture: '/local/images/zones/aldi.png'
+"zone.cvs_*":
+  entity_picture: 'https://logok.org/wp-content/uploads/2015/08/CVS-pharmacy-logo.png'
+"zone.lowes_*":
+  entity_picture: '/local/images/zones/lowes.png'
+"zone.petsmart_*":
+  entity_picture: 'https://cdn.freebiesupply.com/logos/large/2x/petsmart-1-logo-png-transparent.png'
+"zone.bilo_*":
+  entity_picture: 'https://cdn.freebiesupply.com/logos/large/2x/bi-lo-logo-png-transparent.png'
+"zone.*_fire_department":
+  entity_picture: 'https://banner2.cleanpng.com/20180315/cie/kisspng-firefighter-volunteer-fire-department-sticker-deca-fire-hat-cliparts-vector-5aaaa677f02621.1869575815211331759837.jpg'
+"zone.*_police_station":
+  entity_picture: 'https://p7.hiclipart.com/preview/326/648/933/badge-police-officer-lapel-pin-police-badge-png-clip-art.jpg'
+"zone.walmart_*":
+  entity_picture: '/local/images/zones/walmart.png'
+

@@ -1,0 +1,23 @@
+###########################################
+###########################################
+###########################################
+######### alarm_control_panel.yaml ########
+###########################################
+- platform: manual
+  name: Security System
+  code: !secret alarm_code_01
+  arming_time: 10
+  delay_time: 5
+  trigger_time: 600
+  disarmed:
+    trigger_time: 0
+    delay_time: 0
+  armed_home:
+    arming_time: 0
+    delay_time: 0
+  armed_away:
+    arming_time: 0
+    delay_time: 0
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

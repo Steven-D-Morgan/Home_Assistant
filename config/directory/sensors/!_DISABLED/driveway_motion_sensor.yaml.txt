@@ -1,0 +1,21 @@
+###########################################
+###########################################
+###########################################
+#### zwave_driveway_motion_sensor.yaml ####
+###########################################
+platform: template
+sensors:
+  driveway_template_motion:
+    friendly_name: "Driveway Motion Sensor"
+    value_template: "{{ is_state('sensor.driveway_sensor_burglar', '8') }}"
+###########################################
+  driveway_template_battery_level:
+    friendly_name: 'Driveway Sensor Battery %'
+    unit_of_measurement: '%'
+    value_template: "{{ state_attr('zwave.zse29_01_driveway_sensor', 'battery_level') }}"
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
+###########################################
+###########################################
+###---------> USEFUL RESOURCES <--------###

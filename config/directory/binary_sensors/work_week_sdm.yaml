@@ -1,0 +1,31 @@
+###########################################
+###########################################
+###########################################
+######### work_schedule_sdm.yaml ##########
+###########################################
+###---------> Workday Sensors <---------###
+- platform: workday
+  name: SDM_WW_Thu-Sat_Day
+  country: US
+  workdays: [thu, fri, sat]
+  excludes: [mon, tue, wed, sun]
+
+#- platform: workday
+#  name: SDM_WW_Wed_Day
+#  country: US
+#  workdays: [wed]
+#  excludes: [mon, tue, thu, fri, sat, sun]
+###########################################
+###-------> Time of Day Sensors <-------###
+#- platform: tod
+#  name: SDM_WW_Wed_Schedule
+#  after: '11:30'
+#  before: '19:00'
+
+- platform: tod
+  name: SDM_WW_Thu-Sat_Morning
+  after: '05:00'
+  before: '06:00'
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################

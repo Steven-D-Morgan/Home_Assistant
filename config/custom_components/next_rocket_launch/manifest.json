@@ -1,0 +1,13 @@
+{
+    "domain": "next_rocket_launch",
+    "name": "Next Rocket Launch",
+    "config_flow": false,
+    "version": "1.0.0",
+    "documentation": "",
+    "requirements": ["ics==0.7"],
+    "ssdp": [],
+    "zeroconf": [],
+    "homekit": {},
+    "dependencies": [],
+    "codeowners": ["@Verbalinsurection"]
+  }

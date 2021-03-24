@@ -1,0 +1,34 @@
+###########################################
+###########################################
+###########################################
+######## kasa_z420_server.yaml ########
+###########################################
+- platform: template
+  sensors:
+    z420_server_amps:
+      friendly_name_template: '{{ states.switch.z420_server.name}} Current'
+      value_template: '{{ states.switch.z420_server.attributes["current_a"] | float }}'
+      unit_of_measurement: 'A'
+###########################################
+    z420_server_watts:
+      friendly_name_template: '{{ states.switch.z420_server.name}} Current Consumption'
+      value_template: '{{ states.switch.z420_server.attributes["current_power_w"] | float }}'
+      unit_of_measurement: 'W'
+###########################################
+    z420_server_kwh_total:
+      friendly_name_template: '{{ states.switch.z420_server.name}} Total Consumption'
+      value_template: '{{ states.switch.z420_server.attributes["total_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+###########################################
+    z420_server_volts:
+      friendly_name_template: '{{ states.switch.z420_server.name}} Voltage'
+      value_template: '{{ states.switch.z420_server.attributes["voltage"] | float }}'
+      unit_of_measurement: 'V'
+###########################################
+    z420_server_kwh_today:
+      friendly_name_template: '{{ states.switch.z420_server.name}} Todays Consumption'
+      value_template: '{{ states.switch.z420_server.attributes["today_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+###########################################
+###----> END OF CONFIGURATION FILE <----###
+###########################################
